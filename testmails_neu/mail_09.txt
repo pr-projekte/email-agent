@@ -1,0 +1,11 @@
+Von: systemmeldung@wohnportal.example.at
+Betreff: Vorgang 8841: Status geändert
+Datum: 2026-09-22
+
+Für Vorgang 8841 wurde der Status aktualisiert.
+
+Objekt: Lindenhof
+Neuer Status: Rückmeldung erforderlich
+Frist: —
+
+Diese Nachricht wurde automatisch erstellt. Bitte antworten Sie nicht auf diese E-Mail.

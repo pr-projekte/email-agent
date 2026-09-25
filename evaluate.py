@@ -6,19 +6,22 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+TEST_FOLDER = "testmails"  # oder "testmails_neu"
+
 with open("kategorien.json", "r", encoding="utf-8") as datei:
     config = json.load(datei)
 
 category_hits = 0
 action_hits = 0
 counted = 0
+wrongly_ignored = 0
 
-with open("testmails/erwartungen.csv", "r", encoding="utf-8", newline="") as datei:
+with open(TEST_FOLDER + "/erwartungen.csv", "r", encoding="utf-8", newline="") as datei:
     reader = csv.reader(datei)
     next(reader)
 
     for line in reader:
-        with open("testmails/" + line[0], "r", encoding="utf-8") as test_mails:
+        with open(TEST_FOLDER + "/" + line[0], "r", encoding="utf-8") as test_mails:
             text = test_mails.read()
             prompt = (
                 'a. Du sortierst E-Mails einer Hausverwaltung. Wähle genau eine Kategorie und genau eine Aktion.\n'
@@ -47,6 +50,9 @@ with open("testmails/erwartungen.csv", "r", encoding="utf-8", newline="") as dat
                     category_hits += 1
                 if result["aktion"] == line[2]:
                     action_hits += 1
+                if result["aktion"] == "ignorieren" and line[2] != "ignorieren":
+                    wrongly_ignored += 1
 
 print(f"Kategorie: {category_hits}/{counted}")
 print(f"Aktion: {action_hits}/{counted}")
+print(f"Fälschlich ignoriert: {wrongly_ignored}/{counted}")
