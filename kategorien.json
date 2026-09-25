@@ -1,0 +1,19 @@
+{
+    "kategorien": {
+        "Mieteranfrage": "Mieter haben Fragen, brauchen Informationen oder ein organisatorisches Anliegen. Auch Fragen zu Betriebskosten, Miete, Vertrag, Schlüssel oder Namensschild.",
+        "Mangel/Beschwerden": "Etwas in der Wohnung oder im Haus ist kaputt, beschädigt oder funktioniert nicht, oder Mieter beschweren sich über Zustände oder Nachbarn.",
+        "Rechnung": "Rechnungen, Zahlungserinnerungen, Abbuchungen und Zahlungsbestätigungen. Alles, wo es um Geld geht, auch wenn es von einem Dienstleister kommt.",
+        "Dienstleister": "Nachrichten von Firmen, mit denen schon eine Geschäftsbeziehung besteht oder bei denen angefragt wurde (Termine, Angebote, Verträge), keine Rechnungen.",
+        "Behörde": "Nachrichten von Behörden (Finanzamt, Magistrat, etc.).",
+        "Bewerbung": "Bewerbung für eine Arbeitsstelle und/oder Bewerbungsfragen wie z.B. Arbeitszeiten.",
+        "Werbung": "Unaufgeforderte Verkaufsangebote, Newsletter und Kaltakquise. Auch wenn sie die eigene Liegenschaft erwähnen.",
+        "Sonstiges": "Alles, was in keine andere Kategorie passt, zum Beispiel automatische Antworten wie Abwesenheitsnotizen oder Lesebestätigungen."
+    },
+    "aktionen": {
+        "sofort": "Gefahr für Menschen oder Gebäude, oder ein Schaden wird größer, wenn heute niemand reagiert. Fristen von mehreren Tagen oder Wochen, Mahnungen und Zahlungen sind NICHT sofort.",
+        "heute antworten": "Jemand wartet auf eine Antwort.",
+        "heute erledigen": "Es gibt Arbeit, aber keine Antwort an den Absender, zum Beispiel eine Rechnung oder Mahnung bezahlen oder Mieter über einen Termin informieren.",
+        "zur Kenntnis": "Nichts zu tun, die Information wird aber vielleicht gebraucht.",
+        "ignorieren": "Nichts zu tun, die Information wird nicht gebraucht."
+    }
+}
