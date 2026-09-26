@@ -1,0 +1,12 @@
+Von: Mailserver <mailer-daemon@post.example.invalid>
+Betreff: Unzustellbar: Ihre Nachricht an bewohner@example.invalid
+Datum: 2026-09-24
+
+Dies ist eine automatisch erstellte Zustellinformation.
+
+Ihre Nachricht mit dem Betreff „Wasserzähler ablesen“ konnte nicht zugestellt
+werden. Das Postfach bewohner@example.invalid ist derzeit nicht verfügbar.
+Bitte überprüfen Sie die Empfängeradresse oder versuchen Sie es später erneut.
+
+Dies ist eine automatische Nachricht. Antworten auf diese E-Mail werden nicht
+überwacht.

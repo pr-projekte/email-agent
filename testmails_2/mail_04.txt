@@ -1,0 +1,17 @@
+Von: Buchhaltung Musterbau <rechnung@musterbau.example.invalid>
+Betreff: Rechnung RB-TEST-731 / Stiegenhausbeleuchtung
+Datum: 2026-09-22
+
+Sehr geehrte Damen und Herren,
+
+anbei übermitteln wir unsere Rechnung RB-TEST-731 über den Austausch zweier
+Leuchten im Stiegenhaus, durchgeführt am 18. September. Rechnungsbetrag:
+EUR 286,40 inkl. USt., zahlbar binnen 14 Tagen. Bitte geben Sie bei der
+Überweisung die Rechnungsnummer an.
+
+Für Rückfragen stehen wir gern zur Verfügung.
+
+Freundliche Grüße
+Musterbau Elektro GmbH
+
+[Fiktiver Anhang: RB-TEST-731.pdf]

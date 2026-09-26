@@ -1,0 +1,15 @@
+Von: Reinigungsservice SauberPlus <office@sauberplus.example.invalid>
+Betreff: Angebot Stiegenhausreinigung
+Datum: 2026-09-21
+
+Sehr geehrte Damen und Herren,
+
+wir betreuen mehrere kleine Wohnhäuser im Bezirk und könnten auch Ihre
+Stiegenhausreinigung übernehmen. Im Anhang finden Sie ein unverbindliches Angebot
+für eine wöchentliche Reinigung. Falls Sie bereits versorgt sind, genügt eine
+kurze Absage.
+
+Mit freundlichen Grüßen
+SauberPlus Muster KG
+
+[Fiktiver Anhang: angebot-test.pdf]

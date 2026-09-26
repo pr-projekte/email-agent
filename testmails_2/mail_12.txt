@@ -1,0 +1,12 @@
+Von: Wasserzähler Service <ablesung@zaehler.example.invalid>
+Betreff: Selbstablesung bis 30.09. – Objektkennung HV-TEST-88
+Datum: 2026-09-22
+
+Guten Tag,
+
+für die Jahresabrechnung benötigen wir den Zählerstand des Kaltwasserzählers bis
+30. September. Bitte öffnen Sie das Ableseportal und geben Sie Objektkennung
+HV-TEST-88 sowie den Stand in m³ ein. Falls ein Zugang nicht möglich ist,
+antworten Sie bitte mit einem Foto des Zählers.
+
+Automatisch versandte Nachricht des fiktiven Zählerdienstes.
