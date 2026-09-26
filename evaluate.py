@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-TEST_FOLDER = "testmails"  # oder "testmails_neu"
+TEST_FOLDER = "testmails_neu"  # oder "testmails_neu"
 
 with open("kategorien.json", "r", encoding="utf-8") as datei:
     config = json.load(datei)
@@ -35,7 +35,7 @@ with open(TEST_FOLDER + "/erwartungen.csv", "r", encoding="utf-8", newline="") a
 
             response = requests.post(
                 "http://localhost:11434/api/generate",
-                json={"model": "ministral-3:14b", "prompt": prompt, "stream": False}
+                json={"model": "ministral-3:14b", "prompt": prompt, "stream": False, "options": {"temperature": 0}}
                 )
 
             raw_answer = response.json()["response"]

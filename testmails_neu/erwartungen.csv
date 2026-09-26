@@ -1,11 +1,11 @@
 datei,kategorie,aktion
-mail_01.txt,Mieteranfrage,heute antworten
-mail_02.txt,
-mail_03.txt,,
-mail_04.txt,,
-mail_05.txt,,
-mail_06.txt,,
-mail_07.txt,,
-mail_08.txt,,
-mail_09.txt,,
-mail_10.txt,,
+mail_01.txt,Mangel/Beschwerden,heute antworten
+mail_02.txt,Mangel/Beschwerden,sofort
+mail_03.txt,Rechnung,heute erledigen
+mail_04.txt,Mieteranfrage,heute antworten
+mail_05.txt,Dienstleister,heute antworten
+mail_06.txt,Behörde,heute antworten
+mail_07.txt,Mangel/Beschwerden,heute antworten
+mail_08.txt,Werbung,ignorieren
+mail_09.txt,Sonstiges,heute antworten
+mail_10.txt,Mieteranfrage,heute antworten
