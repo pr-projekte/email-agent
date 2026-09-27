@@ -1,0 +1,17 @@
+Von: Zahlungsstelle Beispiel <zahlung@forderung-aktuell.invalid>
+Betreff: Letzte Mahnung – Zahlung heute erforderlich
+Datum: 2026-09-26
+
+Sehr geehrte Damen und Herren,
+
+für Ihre Verwaltung besteht ein offener Betrag von 1.284,90 EUR.
+
+Überweisen Sie den Betrag noch heute bis 16:00 Uhr. Andernfalls werden ohne weitere Ankündigung zusätzliche Maßnahmen eingeleitet.
+
+IBAN: AT00 0000 0000 0000 0000
+Verwendungszweck: 26-0917
+
+Bitte senden Sie den Zahlungsbeleg anschließend an zahlung@forderung-aktuell.invalid.
+
+Mit freundlichen Grüßen
+Zahlungsstelle Beispiel

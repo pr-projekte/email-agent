@@ -1,0 +1,15 @@
+Von: Nora Beispiel <nora.beispiel@hausportal.invalid>
+Betreff: Wartungsfenster für das Verwaltungsportal
+Datum: 2026-09-25
+
+Guten Tag,
+
+am 2026-09-30 führen wir zwischen 22:00 und 23:00 Uhr Wartungsarbeiten am Verwaltungsportal durch.
+
+Während dieses Zeitraums ist eine Anmeldung möglicherweise nicht möglich. Sie müssen vor dem Wartungsfenster nichts bestätigen und keinen Link öffnen.
+
+Bei Fragen wenden Sie sich bitte an nora.beispiel@hausportal.invalid.
+
+Freundliche Grüße
+Nora Beispiel
+Portalservice Beispiel

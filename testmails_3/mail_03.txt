@@ -1,0 +1,15 @@
+Von: Peter Beispiel <peter.beispiel@konto-service.invalid>
+Betreff: Ihr Zugang läuft heute ab
+Datum: 2026-09-24
+
+Guten Tag,
+
+Ihr Zugang zum Verwaltungsportal läuft heute um 18:00 Uhr ab.
+
+Bitte bestätigen Sie Ihr Konto innerhalb der nächsten zwei Stunden:
+https://verwaltung-anmeldung.invalid/login
+
+Andernfalls wird der Zugang automatisch gesperrt.
+
+Peter Beispiel
+Service-Team

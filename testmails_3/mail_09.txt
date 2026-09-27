@@ -1,0 +1,18 @@
+Von: Anna Beispiel <anna.beispiel@stadtstelle.invalid>
+Betreff: Zahlungsaufforderung – Aktenzeichen 2026-4711
+Datum: 2026-09-22
+
+Sehr geehrte Damen und Herren,
+
+für das Objekt Sonnenweg 0/6, 0000 Beispielstadt, ist ein Betrag von 74,50 EUR offen.
+
+Bitte überweisen Sie den Betrag sofort, spätestens heute bis 15:00 Uhr.
+
+IBAN: AT00 0000 0000 0000 0000
+Aktenzeichen: 2026-4711
+
+Wenn die Zahlung nicht bis 15:00 Uhr eingeht, wird der Vorgang ohne weitere Rückfrage weitergegeben.
+
+Mit freundlichen Grüßen
+Anna Beispiel
+Zahlungsstelle

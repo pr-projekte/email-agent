@@ -1,0 +1,16 @@
+Von: Daniel Beispiel <daniel.beispiel@mieter-service.invalid>
+Betreff: Änderung der Auszahlung für mein Guthaben
+Datum: 2026-09-26
+
+Guten Tag,
+
+bitte überweisen Sie mein Guthaben aus der Betriebskostenabrechnung ausnahmsweise auf das Konto meines Bruders:
+
+Kontoinhaber: Lukas Beispiel
+IBAN: AT00 0000 0000 0000 0000
+
+Mein eigenes Konto kann derzeit nicht verwendet werden. Bitte erledigen Sie die Überweisung möglichst heute.
+
+Freundliche Grüße
+Daniel Beispiel
+Musterstraße 0/2, 0000 Beispielstadt

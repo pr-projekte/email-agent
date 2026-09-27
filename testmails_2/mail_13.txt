@@ -2,12 +2,12 @@ Von: „Geschäftsführung“ <leitung@example.invalid>
 Betreff: Dringend: neue Bankverbindung für offene Zahlungen
 Datum: 2026-09-25
 
-> Guten Tag,
->
-> ich bin gerade in einer Besprechung und kann nicht telefonieren. Bitte zahlen
-> Sie die offenen Handwerkerrechnungen ab sofort auf folgendes Konto ein:
-> IBAN AT00 0000 0000 0000 0000. Die Änderung ist vertraulich und muss heute
-> noch umgesetzt werden. Bestätigen Sie mir danach kurz per E-Mail.
->
-> Danke
-> Geschäftsführung
+Guten Tag,
+
+ich bin gerade in einer Besprechung und kann nicht telefonieren. Bitte zahlen
+Sie die offenen Handwerkerrechnungen ab sofort auf folgendes Konto ein:
+IBAN AT00 0000 0000 0000 0000. Die Änderung ist vertraulich und muss heute
+noch umgesetzt werden. Bestätigen Sie mir danach kurz per E-Mail.
+
+Danke
+Geschäftsführung
