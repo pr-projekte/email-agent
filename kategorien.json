@@ -11,10 +11,12 @@
         "Sonstiges": "Alles, was in keine andere Kategorie passt, zum Beispiel automatische Antworten wie Abwesenheitsnotizen oder Lesebestätigungen."
     },
     "aktionen": {
-        "sofort": "Gefahr für Menschen oder Gebäude, oder ein Schaden wird größer, wenn heute niemand reagiert. Fristen von mehreren Tagen oder Wochen, Mahnungen und Zahlungen sind NICHT sofort. Sofort gilt auch dann, wenn jemand auf eine Antwort wartet, und geht jeder anderen Aktion außer prüfen vor.",
+        "sofort": "Gefahr für Menschen oder Gebäude, oder ein Schaden wird größer, wenn heute niemand reagiert. Fristen von mehreren Tagen oder Wochen, Mahnungen und Zahlungen sind NICHT sofort. Sofort gilt auch dann, wenn jemand auf eine Antwort wartet, und geht jeder anderen Aktion vor.",
         "heute": "Heute ist etwas zu tun: Jemand wartet auf eine Antwort (egal auf welchem Weg, auch Telefon oder Portal), oder es fällt Arbeit an, zum Beispiel eine Rechnung bezahlen, eine Unterlage schicken, einen Handwerker beauftragen oder Mieter über einen Termin informieren.",
         "zur Kenntnis": "Nichts zu tun, die Information wird aber vielleicht gebraucht. Im Zweifel zwischen zur Kenntnis und ignorieren gilt zur Kenntnis, im Zweifel zwischen heute und zur Kenntnis gilt heute.",
-        "prüfen": "Jeder Betrugsverdacht und jeder Kontowechsel: nicht zahlen, keinen Link anklicken, beim Absender über einen bekannten Weg nachfragen. Geht sofort vor.",
         "ignorieren": "Nichts zu tun, die Information wird nicht gebraucht."
+    },
+    "feste_aktionen": {
+        "Betrugsverdacht": "prüfen"
     }
 }

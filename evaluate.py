@@ -42,6 +42,9 @@ with open(TEST_FOLDER + "/erwartungen.csv", "r", encoding="utf-8", newline="") a
             clean_answer = raw_answer.replace("```json", "").replace("```", "").strip()
             result = json.loads(clean_answer)
 
+            if result["kategorie"] in config["feste_aktionen"]:
+                result["aktion"] = config["feste_aktionen"][result["kategorie"]]
+
             print(f" {line[0]} | Soll: {line[1]} / {line[2]} | Modell: {result["kategorie"]} / {result["aktion"]}")
 
             if line[0] not in ("mail_21.txt", "mail_22.txt"):
