@@ -7,12 +7,14 @@
         "Behörde": "Nachrichten von Behörden (Finanzamt, Magistrat, etc.).",
         "Bewerbung": "Bewerbung für eine Arbeitsstelle und/oder Bewerbungsfragen wie z.B. Arbeitszeiten.",
         "Werbung": "Unaufgeforderte Verkaufsangebote, Newsletter und Kaltakquise. Auch wenn sie die eigene Liegenschaft erwähnen.",
+        "Betrugsverdacht": "Im Text steht ein Warnzeichen für Betrug: Aufforderung, über einen Link Zugangsdaten einzugeben oder sich anzumelden; jede neue oder geänderte Bankverbindung, auch wenn sie ruhig und mit Vorlauf angekündigt wird; Zahlung auf das Konto einer Privatperson oder einer anderen Firma als dem Absender; Druck durch Fristen von wenigen Stunden oder bis heute; Drohungen mit Sperre, Kündigung oder Anwalt. Geht Rechnung, Dienstleister und Behörde vor, auch wenn die Mail von dort zu kommen scheint. Eine Rechnung ohne solches Warnzeichen ist Rechnung.",
         "Sonstiges": "Alles, was in keine andere Kategorie passt, zum Beispiel automatische Antworten wie Abwesenheitsnotizen oder Lesebestätigungen."
     },
     "aktionen": {
-        "sofort": "Gefahr für Menschen oder Gebäude, oder ein Schaden wird größer, wenn heute niemand reagiert. Fristen von mehreren Tagen oder Wochen, Mahnungen und Zahlungen sind NICHT sofort. Sofort gilt auch dann, wenn jemand auf eine Antwort wartet, und geht jeder anderen Aktion vor.",
+        "sofort": "Gefahr für Menschen oder Gebäude, oder ein Schaden wird größer, wenn heute niemand reagiert. Fristen von mehreren Tagen oder Wochen, Mahnungen und Zahlungen sind NICHT sofort. Sofort gilt auch dann, wenn jemand auf eine Antwort wartet, und geht jeder anderen Aktion außer prüfen vor.",
         "heute": "Heute ist etwas zu tun: Jemand wartet auf eine Antwort (egal auf welchem Weg, auch Telefon oder Portal), oder es fällt Arbeit an, zum Beispiel eine Rechnung bezahlen, eine Unterlage schicken, einen Handwerker beauftragen oder Mieter über einen Termin informieren.",
         "zur Kenntnis": "Nichts zu tun, die Information wird aber vielleicht gebraucht. Im Zweifel zwischen zur Kenntnis und ignorieren gilt zur Kenntnis, im Zweifel zwischen heute und zur Kenntnis gilt heute.",
+        "prüfen": "Jeder Betrugsverdacht und jeder Kontowechsel: nicht zahlen, keinen Link anklicken, beim Absender über einen bekannten Weg nachfragen. Geht sofort vor.",
         "ignorieren": "Nichts zu tun, die Information wird nicht gebraucht."
     }
 }

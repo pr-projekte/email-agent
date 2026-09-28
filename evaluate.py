@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-TEST_FOLDER = "testmails_2"  # oder "testmails_0", "testmails_2"
+TEST_FOLDER = "testmails_3"
 
 with open("kategorien.json", "r", encoding="utf-8") as datei:
     config = json.load(datei)
