@@ -3,6 +3,7 @@ import csv
 import os
 import requests
 from dotenv import load_dotenv
+import math
 
 load_dotenv()
 
@@ -15,6 +16,7 @@ category_hits = 0
 action_hits = 0
 counted = 0
 wrongly_ignored = 0
+controll_mistakes = 0
 
 with open(TEST_FOLDER + "/erwartungen.csv", "r", encoding="utf-8", newline="") as datei:
     reader = csv.reader(datei)
@@ -35,17 +37,46 @@ with open(TEST_FOLDER + "/erwartungen.csv", "r", encoding="utf-8", newline="") a
 
             response = requests.post(
                 "http://localhost:11434/api/generate",
-                json={"model": "ministral-3:14b", "prompt": prompt, "stream": False, "options": {"temperature": 0}}
+                json={
+                    "model": "ministral-3:14b",
+                    "prompt": prompt,
+                    "stream": False,
+                    "options": {"temperature": 0},
+                    "logprobs": True
+                }
                 )
 
             raw_answer = response.json()["response"]
+            logprobs = response.json()["logprobs"]
+            quotes_bisher = 0
+            kategorie_text = ""
+            kategorie_sicherheit = 1
+            aktion_text = ""
+            aktion_sicherheit = 1
+        
+            for log in logprobs:
+        
+                if quotes_bisher == 3 and not '"' in log["token"]:
+                    kategorie_text = kategorie_text + log["token"]
+                    kategorie_sicherheit = kategorie_sicherheit * math.exp(log["logprob"])
+        
+                if quotes_bisher == 7 and not '"' in log["token"]:
+                    aktion_text = aktion_text + log["token"]
+                    aktion_sicherheit = aktion_sicherheit * math.exp(log["logprob"])
+        
+                quotes_bisher += log["token"].count('"')
+
             clean_answer = raw_answer.replace("```json", "").replace("```", "").strip()
             result = json.loads(clean_answer)
+
+            if kategorie_text != result["kategorie"] or aktion_text != result["aktion"]:
+                controll_mistakes += 1
+                print(f"{line[0]} | kategorie: {kategorie_text} / {result["kategorie"]} | aktion: {aktion_text} / {result["aktion"]}")
 
             if result["kategorie"] in config["feste_aktionen"]:
                 result["aktion"] = config["feste_aktionen"][result["kategorie"]]
 
-            print(f" {line[0]} | Soll: {line[1]} / {line[2]} | Modell: {result["kategorie"]} / {result["aktion"]}")
+            print(f" {line[0]} | Soll: {line[1]} / {line[2]} | Modell: {result["kategorie"]} {round(kategorie_sicherheit * 100, 1)} % / {result["aktion"]} {round(aktion_sicherheit * 100, 1)} %")
 
             if line[0] not in ("mail_21.txt", "mail_22.txt"):
                 counted += 1
@@ -56,6 +87,10 @@ with open(TEST_FOLDER + "/erwartungen.csv", "r", encoding="utf-8", newline="") a
                 if result["aktion"] == "ignorieren" and line[2] != "ignorieren":
                     wrongly_ignored += 1
 
+        #print(f"{kategorie_text} | {round(kategorie_sicherheit * 100, 1)}%")
+        #print(f"{aktion_text} | {round(aktion_sicherheit * 100, 1)}%")
+
 print(f"Kategorie: {category_hits}/{counted}")
 print(f"Aktion: {action_hits}/{counted}")
 print(f"Fälschlich ignoriert: {wrongly_ignored}/{counted}")
+print(f"Kontrollfehler: {controll_mistakes}/{counted}")
