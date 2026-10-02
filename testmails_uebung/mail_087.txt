@@ -1,0 +1,8 @@
+Von: Mail Delivery Subsystem <mailer-daemon@mx-fiktiv.invalid>
+Betreff: Unzustellbar: Ihre Nachricht an r.kaiser@example.invalid
+Datum: 2026-09-10
+
+Ihre Nachricht konnte nicht zugestellt werden.
+Empfänger: r.kaiser@example.invalid
+Grund: Das Postfach ist nicht vorhanden.
+Die ursprüngliche Nachricht ist als Anlage beigefügt.

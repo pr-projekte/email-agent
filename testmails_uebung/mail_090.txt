@@ -1,0 +1,6 @@
+Von: Postfach-System <postmaster@mx-hausbuero.example.invalid>
+Betreff: Speicherplatz Ihres Postfachs
+Datum: 2026-09-20
+
+Der Speicher Ihres Postfachs ist zu 92 % belegt (4,6 GB von 5 GB).
+Dies ist eine automatische Systemmeldung. Es wurden keine Nachrichten gelöscht.

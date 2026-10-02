@@ -1,0 +1,103 @@
+datei,kategorie,aktion
+mail_001.txt,Mieteranfrage,heute
+mail_002.txt,Mieteranfrage,heute
+mail_003.txt,Mieteranfrage,heute
+mail_004.txt,Mieteranfrage,heute
+mail_005.txt,Mangel/Beschwerden,sofort
+mail_006.txt,Mangel/Beschwerden,sofort
+mail_007.txt,Mangel/Beschwerden,heute
+mail_008.txt,Rechnung,heute
+mail_009.txt,Rechnung,heute
+mail_010.txt,Rechnung,zur Kenntnis
+mail_011.txt,Dienstleister,heute
+mail_012.txt,Dienstleister,heute
+mail_013.txt,Dienstleister,heute
+mail_014.txt,Behörde,heute
+mail_015.txt,Behörde,heute
+mail_016.txt,Bewerbung,heute
+mail_017.txt,Werbung,ignorieren
+mail_018.txt,Werbung,ignorieren
+mail_019.txt,Sonstiges,zur Kenntnis
+mail_020.txt,Mangel/Beschwerden,heute
+mail_021.txt,Mangel/Beschwerden,heute
+mail_022.txt,Mangel/Beschwerden,sofort
+mail_023.txt,Rechnung,heute
+mail_024.txt,Mieteranfrage,heute
+mail_025.txt,Dienstleister,heute
+mail_026.txt,Behörde,heute
+mail_027.txt,Mangel/Beschwerden,heute
+mail_028.txt,Werbung,ignorieren
+mail_029.txt,Sonstiges,heute
+mail_030.txt,Mieteranfrage,heute
+mail_031.txt,Mangel/Beschwerden,heute
+mail_032.txt,Dienstleister,heute
+mail_033.txt,Behörde,heute
+mail_034.txt,Rechnung,heute
+mail_035.txt,Werbung,ignorieren
+mail_036.txt,Sonstiges,heute
+mail_037.txt,Mangel/Beschwerden,sofort
+mail_038.txt,Mangel/Beschwerden,sofort
+mail_039.txt,Mangel/Beschwerden,sofort
+mail_040.txt,Mangel/Beschwerden,heute
+mail_041.txt,Mieteranfrage,heute
+mail_042.txt,Dienstleister,heute
+mail_043.txt,Betrugsverdacht,prüfen
+mail_044.txt,Mangel/Beschwerden,heute
+mail_045.txt,Dienstleister,heute
+mail_046.txt,Mieteranfrage,heute
+mail_047.txt,Mieteranfrage,heute
+mail_048.txt,Mieteranfrage,heute
+mail_049.txt,Werbung,ignorieren
+mail_050.txt,Mangel/Beschwerden,sofort
+mail_051.txt,Dienstleister,heute
+mail_052.txt,Betrugsverdacht,prüfen
+mail_053.txt,Dienstleister,zur Kenntnis
+mail_054.txt,Betrugsverdacht,prüfen
+mail_055.txt,Betrugsverdacht,prüfen
+mail_056.txt,Betrugsverdacht,prüfen
+mail_057.txt,Rechnung,heute
+mail_058.txt,Betrugsverdacht,prüfen
+mail_059.txt,Mieteranfrage,heute
+mail_060.txt,Betrugsverdacht,prüfen
+mail_061.txt,Behörde,heute
+mail_062.txt,Behörde,heute
+mail_063.txt,Behörde,heute
+mail_064.txt,Behörde,heute
+mail_065.txt,Behörde,heute
+mail_066.txt,Behörde,heute
+mail_067.txt,Behörde,heute
+mail_068.txt,Rechnung,heute
+mail_069.txt,Rechnung,heute
+mail_070.txt,Rechnung,zur Kenntnis
+mail_071.txt,Rechnung,heute
+mail_072.txt,Rechnung,zur Kenntnis
+mail_073.txt,Werbung,ignorieren
+mail_074.txt,Werbung,ignorieren
+mail_075.txt,Werbung,ignorieren
+mail_076.txt,Werbung,ignorieren
+mail_077.txt,Werbung,ignorieren
+mail_078.txt,Werbung,ignorieren
+mail_079.txt,Dienstleister,heute
+mail_080.txt,Dienstleister,heute
+mail_081.txt,Betrugsverdacht,prüfen
+mail_082.txt,Betrugsverdacht,prüfen
+mail_083.txt,Betrugsverdacht,prüfen
+mail_084.txt,Betrugsverdacht,prüfen
+mail_085.txt,Sonstiges,zur Kenntnis
+mail_086.txt,Sonstiges,zur Kenntnis
+mail_087.txt,Sonstiges,heute
+mail_088.txt,Sonstiges,zur Kenntnis
+mail_089.txt,Sonstiges,ignorieren
+mail_090.txt,Sonstiges,heute
+mail_091.txt,Sonstiges,zur Kenntnis
+mail_092.txt,Sonstiges,zur Kenntnis
+mail_093.txt,Bewerbung,heute
+mail_094.txt,Bewerbung,heute
+mail_095.txt,Werbung,ignorieren
+mail_096.txt,Bewerbung,heute
+mail_097.txt,Bewerbung,heute
+mail_098.txt,Werbung,zur Kenntnis
+mail_099.txt,Bewerbung,heute
+mail_100.txt,Bewerbung,heute
+mail_101.txt,Bewerbung,zur Kenntnis
+mail_102.txt,Bewerbung,heute

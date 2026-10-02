@@ -1,0 +1,7 @@
+Von: FaxGateway Benachrichtigungen <status@faxgateway.example.invalid>
+Betreff: Faxübermittlung erfolgreich
+Datum: 2026-09-24
+
+Ihr Fax wurde am 24. September 2026 um 11:38 Uhr erfolgreich übermittelt.
+Empfangsnummer: +43 000 0000003
+Umfang: 2 Seiten

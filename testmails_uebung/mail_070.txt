@@ -1,0 +1,13 @@
+Von: Versicherung Beispielschutz AG <service@beispielschutz.example.invalid>
+Betreff: Prämienabbuchung für die Gebäudeversicherung
+Datum: 2026-09-21
+
+Sehr geehrte Damen und Herren,
+
+wir bestätigen die Abbuchung der halbjährlichen Versicherungsprämie für das Gebäude Musterweg 0. Der Betrag von EUR 936,50 wurde am 18. September 2026 gemäß dem bestehenden SEPA-Mandat eingezogen. Die zugehörige Prämienabrechnung finden Sie im Anhang.
+
+Polizzennummer: BS-TEST-6602
+Versicherungszeitraum: 1. Oktober 2026 bis 31. März 2027
+
+Freundliche Grüße
+Versicherung Beispielschutz AG
