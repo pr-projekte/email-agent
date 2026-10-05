@@ -5,6 +5,7 @@ import math
 
 TEST_FOLDER = "testmails_uebung"
 SCHWELLE = 0.8
+SCHWELLEN = [0.5, 0.6, 0.7, 0.8, 0.9, 0.95, 0.99]
 
 with open("kategorien.json", "r", encoding="utf-8") as datei:
     config = json.load(datei)
@@ -21,6 +22,8 @@ category_slipped = 0
 action_caught = 0
 action_slipped = 0
 per_category = {}
+category_pairs = []
+action_pairs = []
 
 for kategorie in config["kategorien"]:
     per_category[kategorie] = [0, 0, 0] # Mails mit Soll, Kategorie richtig, Aktion richtig 
@@ -116,6 +119,10 @@ with open(TEST_FOLDER + "/erwartungen.csv", "r", encoding="utf-8", newline="") a
             if result["aktion"] == "ignorieren" and line[2] != "ignorieren":
                 wrongly_ignored += 1
 
+            category_pairs.append([kategorie_sicherheit, result["kategorie"] == line[1]])
+            if result["kategorie"] not in config["feste_aktionen"]:
+                action_pairs.append([aktion_sicherheit, result["aktion"] == line[2]])
+
 print(f"Kategorie: {category_hits}/{counted}")
 print(f"Aktion: {action_hits}/{counted}")
 print(f"Fälschlich ignoriert: {wrongly_ignored}/{counted}")
@@ -129,3 +136,25 @@ print(f"Aktion durchgerutscht: {action_slipped}/{counted}")
 print("-------------------------------------------------")
 for kategorie, zahlen in per_category.items():
     print(f"{kategorie}: Kategorie: {zahlen[1]}/{zahlen[0]} richtig | Aktion: {zahlen[2]}/{zahlen[0]} richtig")
+print("-------------------------------------------------")
+
+for schwelle in SCHWELLEN:
+
+    cat_caught = 0
+    cat_false_alarm = 0
+    act_caught = 0
+    act_false_alarm = 0
+
+    for pair in category_pairs:
+        if pair[0] < schwelle and not pair[1]:
+            cat_caught += 1
+        if pair[0] < schwelle and pair[1]:
+            cat_false_alarm += 1
+
+    for pair in action_pairs:
+        if pair[0] < schwelle and not pair[1]:
+            act_caught += 1
+        if pair[0] < schwelle and pair[1]:
+            act_false_alarm += 1
+
+    print(f"Schwelle: {schwelle} | Kategorie: {cat_caught} abgefangen, {cat_false_alarm} Fehlalarme | Aktion: {act_caught} abgefangen, {act_false_alarm} Fehlalarme")
