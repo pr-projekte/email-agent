@@ -21,6 +21,7 @@ category_caught = 0
 category_slipped = 0
 action_caught = 0
 action_slipped = 0
+invalid_answers = 0
 per_category = {}
 category_pairs = []
 action_pairs = []
@@ -77,7 +78,24 @@ with open(TEST_FOLDER + "/erwartungen.csv", "r", encoding="utf-8", newline="") a
                 quotes_bisher += log["token"].count('"')
 
             clean_answer = raw_answer.replace("```json", "").replace("```", "").strip()
-            result = json.loads(clean_answer)
+
+            try:
+                result = json.loads(clean_answer)
+            except json.JSONDecodeError:
+                result = {}
+
+            if (
+                "kategorie" not in result
+                or "aktion" not in result
+                or result["kategorie"] not in config["kategorien"]
+                or result["aktion"] not in config["aktionen"]
+            ):
+                invalid_answers += 1
+
+                print(f"{line[0]} | ungültig | Antwort: {clean_answer}")
+                counted += 1
+                per_category[line[1]][0] += 1
+                continue
 
             if kategorie_text != result["kategorie"] or aktion_text != result["aktion"]:
                 print(f"{line[0]} | kategorie: {kategorie_text} / {result["kategorie"]} | aktion: {aktion_text} / {result["aktion"]}")
@@ -158,3 +176,5 @@ for schwelle in SCHWELLEN:
             act_false_alarm += 1
 
     print(f"Schwelle: {schwelle} | Kategorie: {cat_caught} abgefangen, {cat_false_alarm} Fehlalarme | Aktion: {act_caught} abgefangen, {act_false_alarm} Fehlalarme")
+    
+print(f"Ungültig: {invalid_answers}/{counted}")
