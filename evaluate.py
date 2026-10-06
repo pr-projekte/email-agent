@@ -134,7 +134,7 @@ with open(TEST_FOLDER + "/erwartungen.csv", "r", encoding="utf-8", newline="") a
                 else:
                     action_slipped += 1
 
-            if result["aktion"] == "ignorieren" and line[2] != "ignorieren":
+            if result["aktion"] == "ignorieren" and line[2] in ["sofort", "heute", "prüfen"]:
                 wrongly_ignored += 1
 
             category_pairs.append([kategorie_sicherheit, result["kategorie"] == line[1]])
