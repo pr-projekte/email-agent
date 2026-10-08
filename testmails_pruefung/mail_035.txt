@@ -1,0 +1,10 @@
+Von: Zahlungsservice <service@liegenschaft-ausgleich.example.invalid>
+Betreff: Rückzahlung aus der Jahresabrechnung
+Datum: 20.09.2026
+
+Guten Tag,
+
+für Ihr Verwaltungsbüro wurde eine Rückzahlung aus der Jahresabrechnung vorbereitet. Die Auszahlung kann nach Abgleich der Empfängerdaten erfolgen. Bitte bestätigen Sie über unser Serviceportal Ihre Kontoverbindung und die Mobilnummer der zeichnungsberechtigten Person.
+
+Freundliche Grüße
+Zahlungsservice

@@ -1,0 +1,7 @@
+Von: IT-Postfach Verwaltung <meldung@postfach-pruefung.example.invalid>
+Betreff: Speicherlimit erreicht
+Datum: 04.10.2026
+
+Guten Tag,
+
+das Speicherlimit Ihres Postfachs wurde erreicht. Neue Nachrichten werden derzeit zurückgehalten. Zur Wiederherstellung des Empfangs bestätigen Sie bitte Ihre Anmeldung über den beigefügten Link. Die Freigabe erfolgt nach der Überprüfung Ihrer Zugangsdaten.

@@ -1,0 +1,10 @@
+Von: Zustellservice <zustellung@briefankundigung.example.invalid>
+Betreff: Elektronische Ankündigung einer RSa-Sendung
+Datum: 19.09.2026
+
+Sehr geehrte Damen und Herren,
+
+eine an Ihre Verwaltung adressierte RSa-Sendung konnte nicht zugestellt werden. Sie können den Zustellnachweis und die digitale Kopie noch heute abrufen. Bitte melden Sie sich dafür über die Schaltfläche „Sendung anzeigen“ mit Ihrem E-Mail-Konto an.
+
+Mit freundlichen Grüßen
+Zustellservice
