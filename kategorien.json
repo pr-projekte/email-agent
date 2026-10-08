@@ -9,7 +9,7 @@
         "Bewerbung": "Bewerbung für eine Arbeitsstelle und/oder Bewerbungsfragen wie z.B. Arbeitszeiten.",
         "Werbung": "Unaufgeforderte Verkaufsangebote, Newsletter und Kaltakquise. Auch wenn sie die eigene Liegenschaft erwähnen.",
         "Betrugsverdacht": "Im Text steht ein Warnzeichen für Betrug: Aufforderung, über einen Link Zugangsdaten einzugeben oder sich anzumelden; jede neue oder geänderte Bankverbindung, auch wenn sie ruhig und mit Vorlauf angekündigt wird; Zahlung auf das Konto einer Privatperson oder einer anderen Firma als dem Absender; Druck durch Fristen von wenigen Stunden oder bis heute; Drohungen mit Sperre, Kündigung oder Anwalt.",
-        "Sonstiges": "Alles, was in keine andere Kategorie passt, zum Beispiel automatische Antworten wie Abwesenheitsnotizen oder Lesebestätigungen."
+        "Sonstiges": "Alles, was in keine andere Kategorie passt, zum Beispiel automatische Systemnachrichten wie Abwesenheitsnotizen, Lese-, Eingangs- und Zustellbestätigungen oder Statusmeldungen eines Portals, auch wenn sie einen Mieter oder eine Firma erwähnen."
     },
     "vorrang": [
         "Steht im Text ein Warnzeichen für Betrug, ist die Kategorie Betrugsverdacht, auch wenn die Mail von einer Firma, einem Dienstleister oder einer Behörde zu kommen scheint, weil Betrüger sich gerade als bekannte Absender ausgeben.",
