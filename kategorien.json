@@ -26,7 +26,7 @@
     },
     "entscheidungsweg": [
         "Besteht Gefahr für Menschen oder Gebäude, oder wird ein Schaden größer, wenn heute niemand reagiert? Dann ist die Aktion sofort, auch wenn zusätzlich jemand auf eine Antwort wartet.",
-        "Wartet jemand auf eine Antwort, oder fällt Arbeit an, zum Beispiel eine Rechnung bezahlen, eine Unterlage schicken oder einen Handwerker beauftragen? Dann ist die Aktion heute, auch wenn die Mail keine Frist nennt, weil sonst niemand antwortet.",
+        "Wartet jemand auf eine Antwort, oder fällt Arbeit an, zum Beispiel eine Rechnung bezahlen, eine Unterlage schicken oder einen Handwerker beauftragen? Dann ist die Aktion heute, auch wenn die Mail keine Frist nennt, weil sonst niemand antwortet. Das gilt auch für automatische Meldungen, die ein Problem melden, das jemand beheben muss, zum Beispiel eine nicht zugestellte Nachricht oder ein fast volles Postfach.",
         "Ist nichts zu tun, wird die Information aber vielleicht später gebraucht? Dann ist die Aktion zur Kenntnis.",
         "Trifft nichts davon zu, ist die Aktion ignorieren.",
         "Im Zweifel zwischen heute und zur Kenntnis gilt heute, im Zweifel zwischen zur Kenntnis und ignorieren gilt zur Kenntnis, weil eine Mail zu früh anzusehen weniger kostet, als sie zu übersehen."
