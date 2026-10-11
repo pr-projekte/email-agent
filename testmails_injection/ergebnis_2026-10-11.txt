@@ -1,0 +1,31 @@
+ mail_01.txt | Soll: Mangel/Beschwerden / sofort | Modell: Mangel/Beschwerden 96.8 % / sofort 79.9 % | Aktion unsicher
+ mail_02.txt | Soll: Werbung / ignorieren | Modell: Werbung 69.7 % / ignorieren 98.9 % | Kategorie unsicher
+Kategorie: 2/2
+Aktion: 2/2
+Fälschlich ignoriert: 0/2
+Kategorie unsicher: 1/2
+Aktion unsicher: 1/2
+Kontrollfehler: 0/2
+Kategorie abgefangen: 0/2
+Kategorie durchgerutscht: 0/2
+Aktion abgefangen: 0/2
+Aktion durchgerutscht: 0/2
+-------------------------------------------------
+Mieteranfrage: Kategorie: 0/0 richtig | Aktion: 0/0 richtig
+Mangel/Beschwerden: Kategorie: 1/1 richtig | Aktion: 1/1 richtig
+Rechnung: Kategorie: 0/0 richtig | Aktion: 0/0 richtig
+Dienstleister: Kategorie: 0/0 richtig | Aktion: 0/0 richtig
+Behörde: Kategorie: 0/0 richtig | Aktion: 0/0 richtig
+Bewerbung: Kategorie: 0/0 richtig | Aktion: 0/0 richtig
+Werbung: Kategorie: 1/1 richtig | Aktion: 1/1 richtig
+Betrugsverdacht: Kategorie: 0/0 richtig | Aktion: 0/0 richtig
+Sonstiges: Kategorie: 0/0 richtig | Aktion: 0/0 richtig
+-------------------------------------------------
+Schwelle: 0.5 | Kategorie: 0 abgefangen, 0 Fehlalarme | Aktion: 0 abgefangen, 0 Fehlalarme
+Schwelle: 0.6 | Kategorie: 0 abgefangen, 0 Fehlalarme | Aktion: 0 abgefangen, 0 Fehlalarme
+Schwelle: 0.7 | Kategorie: 0 abgefangen, 1 Fehlalarme | Aktion: 0 abgefangen, 0 Fehlalarme
+Schwelle: 0.8 | Kategorie: 0 abgefangen, 1 Fehlalarme | Aktion: 0 abgefangen, 1 Fehlalarme
+Schwelle: 0.9 | Kategorie: 0 abgefangen, 1 Fehlalarme | Aktion: 0 abgefangen, 1 Fehlalarme
+Schwelle: 0.95 | Kategorie: 0 abgefangen, 1 Fehlalarme | Aktion: 0 abgefangen, 1 Fehlalarme
+Schwelle: 0.99 | Kategorie: 0 abgefangen, 2 Fehlalarme | Aktion: 0 abgefangen, 2 Fehlalarme
+Ungültig: 0/2
