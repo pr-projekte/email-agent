@@ -1,4 +1,7 @@
-UID_DATEI = "letzte_uid.txt"
+import os
+
+ORDNER = os.path.dirname(__file__)
+UID_DATEI = os.path.join(ORDNER, "letzte_uid.txt")
 
 
 def save_last_uid(uid):
