@@ -2,7 +2,6 @@ import csv
 import urteil
 
 TEST_FOLDER = "testmails_uebung"
-SCHWELLE = 0.8
 SCHWELLEN = [0.5, 0.6, 0.7, 0.8, 0.9, 0.95, 0.99]
 
 config = urteil.config
@@ -41,13 +40,12 @@ with open(TEST_FOLDER + "/erwartungen.csv", "r", encoding="utf-8", newline="") a
             kategorie_sicherheit = bewertung["kategorie_sicherheit"]
             aktion_text = bewertung["aktion_text"]
             aktion_sicherheit = bewertung["aktion_sicherheit"]
+            gueltig = bewertung["gueltig"]
+            kontrollfehler = bewertung["kontrollfehler"]
+            kategorie_unsicher = bewertung["kategorie_unsicher"]
+            aktion_unsicher = bewertung["aktion_unsicher"]
 
-            if (
-                "kategorie" not in result
-                or "aktion" not in result
-                or result["kategorie"] not in config["kategorien"]
-                or result["aktion"] not in config["aktionen"]
-            ):
+            if not gueltig:
                 invalid_answers += 1
 
                 print(f"{line[0]} | ungültig | Antwort: {clean_answer}")
@@ -55,18 +53,15 @@ with open(TEST_FOLDER + "/erwartungen.csv", "r", encoding="utf-8", newline="") a
                 per_category[line[1]][0] += 1
                 continue
 
-            if kategorie_text != result["kategorie"] or aktion_text != result["aktion"]:
+            if kontrollfehler:
                 print(f"{line[0]} | kategorie: {kategorie_text} / {result["kategorie"]} | aktion: {aktion_text} / {result["aktion"]}")
                 controll_mistakes += 1
 
-            if result["kategorie"] in config["feste_aktionen"]:
-                result["aktion"] = config["feste_aktionen"][result["kategorie"]]
-
             mark = ""
-            if kategorie_sicherheit < SCHWELLE:
+            if kategorie_unsicher:
                 category_unsure += 1
                 mark = "| Kategorie unsicher "
-            if result["kategorie"] not in config["feste_aktionen"] and aktion_sicherheit < SCHWELLE:
+            if aktion_unsicher:
                 action_unsure += 1
                 mark = mark +"| Aktion unsicher"
 
@@ -78,7 +73,7 @@ with open(TEST_FOLDER + "/erwartungen.csv", "r", encoding="utf-8", newline="") a
                 category_hits += 1
                 per_category[line[1]][1] += 1
             else:
-                if kategorie_sicherheit < SCHWELLE:
+                if kategorie_unsicher:
                     category_caught += 1
                 else:
                     category_slipped += 1
@@ -87,7 +82,7 @@ with open(TEST_FOLDER + "/erwartungen.csv", "r", encoding="utf-8", newline="") a
                 action_hits += 1
                 per_category[line[1]][2] += 1
             else:
-                if result["kategorie"] not in config["feste_aktionen"] and aktion_sicherheit < SCHWELLE:
+                if aktion_unsicher:
                     action_caught += 1
                 else:
                     action_slipped += 1
