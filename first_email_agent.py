@@ -3,7 +3,8 @@ import os # Um Daten aus den Umgebungsvariablen zu importieren.
 import mail_tools # Importiert die Datei mail_tools.py damit hier funktionen von mail_tools verwendet werden können.
 import telegram_tools # Importiert die Datei telegram_tools.py damit hier funktionen von telegram_tools verwendet werden können.
 import uid_speicher # Importiert das "Gedächnis" von dem Agenten.
-from dotenv import load_dotenv # Importiert das laden aus der .env .
+import urteil # urteil.py gibt ein Dict mit der aufgeräumten Antwort, dem Urteil, den Token-Texten mit ihren Sicherheiten und den Prüfungsergebnissen.
+from dotenv import load_dotenv # Importiert das laden aus der .env.
 
 load_dotenv() # Läd die daten aus der .env in die Umgebungvariablen.
 
@@ -24,6 +25,16 @@ for message_id in new_id: # Für jede UID in new_id passiert folgendes:
     message = mail_tools.bytes_to_message(raw_bytes) # Macht aus den rohen Bytes ein Mail-Objekt.
     attachment_names = mail_tools.get_attachment_names(message) # Holt die Dateinamen der Anhänge als Liste. Die Anhänge selbst werden nirgends gespeichert oder geöffnet.
     message_text = mail_tools.get_message_text(message) # Holt die tatsächliche Mail-Nachricht.
+    mail_text = f"Von: {message['From']}\nBetreff: {message['Subject']}\nDatum: {message['Date']}\n\n{message_text}" # Setzt die Mail aus Absender, Betreff, Datum und Inhalt zusammen.
+
+    bewertung = urteil.urteilen(mail_text) # Benutzt die Funktionen aus urteil.py und speichert das Ergebnis in "bewertung".
+
+    # Gibt die bewertung geordnet aus.
+    print(
+        f"Kategorie: {bewertung["result"]["kategorie"]}\n"
+        f"Aktion: {bewertung["result"]["aktion"]}\n"
+        f"Sicherheiten: {round(bewertung["kategorie_sicherheit"] * 100, 1)} und {round(bewertung["aktion_sicherheit"] * 100, 1)}"
+          )
 
     # Sendet eine Nachricht mit Absender, Betreff, Inhalt und die Namen der Anhänge an Telegram. In send_error ist entweder None(wenn alles klappt) oder ein Fehlertext(bei einem Fehler).
     send_error = telegram_tools.send_telegram_message(
