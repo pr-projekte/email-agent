@@ -12,7 +12,7 @@
         "Sonstiges": "Alles, was in keine andere Kategorie passt, zum Beispiel automatische Systemnachrichten wie Abwesenheitsnotizen, Lese-, Eingangs- und Zustellbestätigungen oder Statusmeldungen eines Portals, auch wenn sie einen Mieter oder eine Firma erwähnen."
     },
     "vorrang": [
-        "Steht im Text ein Warnzeichen für Betrug, ist die Kategorie Betrugsverdacht, auch wenn die Mail von einer Firma, einem Dienstleister oder einer Behörde zu kommen scheint, weil Betrüger sich gerade als bekannte Absender ausgeben.",
+        "Steht im Text ein Warnzeichen für Betrug, ist die Kategorie Betrugsverdacht, auch wenn die Mail von einer Firma, einem Dienstleister oder einer Behörde zu kommen scheint oder wie eine automatische Systemnachricht aussieht, weil Betrüger sich gerade als bekannte Absender ausgeben und ihre Mails als Systemnachricht tarnen.",
         "Schreibt eine Behörde, ist die Kategorie Behörde, auch wenn es um Geld geht (Zahlungsaufforderung, Gebühr, Abgabe), weil es darauf ankommt, wer schreibt, und nicht, worum es geht.",
         "Fragt ein Mieter zu Geld (Betriebskosten, Miete, Vorschreibung, ob eine Zahlung angekommen ist), ist die Kategorie Mieteranfrage und nicht Rechnung, weil es eine Frage ist und keine Zahlungsforderung.",
         "Schickt eine Firma eine Rechnung, Zahlungserinnerung, Abbuchungs- oder Zahlungsbestätigung ohne Warnzeichen für Betrug, ist die Kategorie Rechnung und nicht Dienstleister, auch wenn schon eine Geschäftsbeziehung besteht, weil alles zu Zahlungen in die Buchhaltung gehört.",
