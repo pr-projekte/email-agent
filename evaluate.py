@@ -1,7 +1,7 @@
 import csv
 import urteil
 
-TEST_FOLDER = "testmails_uebung"
+TEST_FOLDER = "testmails_pruefung"
 SCHWELLEN = [0.5, 0.6, 0.7, 0.8, 0.9, 0.95, 0.99]
 
 config = urteil.config
