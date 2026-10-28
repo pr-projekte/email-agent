@@ -77,12 +77,9 @@ for message_id in new_uid: # Für jede UID in new_uid passiert folgendes:
         logging.error(send_error)
         print(send_error)
 
-if len(new_uid) >= 1: # Wenn die länge der liste new_uid länger oder gleich 1 ist. Ohne diese Zeile würde der Agent ohne neue Mails crashen.
-    uid_numbers = [int(uid) for uid in new_uid] # Wandelt alle UID's in new_uid mit int() ind Ganzzahlen um.
-    highest_uid = max(uid_numbers) # Ordnet die gröste UID zu.
-    uid_speicher.save_last_uid(highest_uid) # Speichert die größte als letzte UID.
+    uid_speicher.save_last_uid(message_id)
 
-    logging.info(f"Gespeicherte UID: {highest_uid}.") # Schreibt die gespeicherte UID ins Log.
+    logging.info(f"Gespeicherte UID: {message_id}.")
 
 connection.close() # Schließt die zureit ausgewählte Mailbox.
 connection.logout() # Beendet die vebindung zum Mail-Server.
