@@ -5,6 +5,7 @@ import telegram_tools # Importiert die Datei telegram_tools.py damit hier funkti
 import uid_speicher # Importiert das "Gedächnis" von dem Agenten.
 import urteil # urteil.py gibt ein Dict mit der aufgeräumten Antwort, dem Urteil, den Token-Texten mit ihren Sicherheiten und den Prüfungsergebnissen.
 import logging # Ermöglicht logging.
+import sys
 from dotenv import load_dotenv # Importiert das laden aus der .env.
 
 load_dotenv() # Läd die daten aus der .env in die Umgebungvariablen.
@@ -22,9 +23,14 @@ MAIL_USER = os.environ["MAIL_USER"] # Holt den Mail-Username aus der .env.
 IMAP_SERVER = "imap.gmail.com" # Legt den Mail-Anbieter fest (in dem fall G-Mail).
 IMAP_PORT = 993 # Legt den Port fest, 993 ist der Port für IMAP mit Verschlüsselung(SSL).
 
-connection = imaplib.IMAP4_SSL(IMAP_SERVER, IMAP_PORT) # Baut eine verschlüsselte verbindung zum Mail-Server auf.
-login_status, login_data = connection.login(MAIL_USER, MAIL_PASSWORD) # Loggt dich mit den Daten in deinen Account ein und gibt Status(login_status) und die Antwort der Servers(login_data) zurück.
-select_status, select_data = connection.select("inbox", readonly=True) # Wählt aus von wie (readonly) und wo (inbox) gelesen wird.
+try:
+    connection = imaplib.IMAP4_SSL(IMAP_SERVER, IMAP_PORT) # Baut eine verschlüsselte verbindung zum Mail-Server auf.
+    login_status, login_data = connection.login(MAIL_USER, MAIL_PASSWORD) # Loggt dich mit den Daten in deinen Account ein und gibt Status(login_status) und die Antwort der Servers(login_data) zurück.
+    select_status, select_data = connection.select("inbox", readonly=True) # Wählt aus von wie (readonly) und wo (inbox) gelesen wird.
+except (imaplib.IMAP4.error, OSError) as fehler:
+    logging.error(f"Keine Verbindung zum Mailserver oder Login abgelehnt: {fehler}")
+    print(f"Keine Verbindung zum Mailserver oder Login abgelehnt: {fehler}")
+    sys.exit(1)
 
 logging.info("Lauf gestartet.") # Schreibt ins Log, dass ein Lauf begonnen hat (Verbindung und Login haben geklappt).
 
