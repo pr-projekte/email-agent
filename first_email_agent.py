@@ -6,6 +6,7 @@ import uid_speicher # Importiert das "Gedächnis" von dem Agenten.
 import urteil # urteil.py gibt ein Dict mit der aufgeräumten Antwort, dem Urteil, den Token-Texten mit ihren Sicherheiten und den Prüfungsergebnissen.
 import logging # Ermöglicht logging.
 import sys
+import requests
 from dotenv import load_dotenv # Importiert das laden aus der .env.
 
 load_dotenv() # Läd die daten aus der .env in die Umgebungvariablen.
@@ -46,7 +47,12 @@ for message_id in new_uid: # Für jede UID in new_uid passiert folgendes:
     message_text = mail_tools.get_message_text(message) # Holt die tatsächliche Mail-Nachricht.
     mail_text = f"Von: {message['From']}\nBetreff: {message['Subject']}\nDatum: {message['Date']}\n\n{message_text}" # Setzt die Mail aus Absender, Betreff, Datum und Inhalt zusammen.
 
-    bewertung = urteil.urteilen(mail_text) # Benutzt die Funktionen aus urteil.py und speichert das Ergebnis in "bewertung".
+    try:
+        bewertung = urteil.urteilen(mail_text) # Benutzt die Funktionen aus urteil.py und speichert das Ergebnis in "bewertung".
+    except requests.exceptions.ConnectionError as fehler:
+        logging.error(f"Ollama nicht erreichbar, Lauf abgebrochen bei UID {message_id}: {fehler}")
+        print(f"Ollama nicht erreichbar, Lauf abgebrochen bei UID {message_id}: {fehler}")
+        sys.exit(1)
 
     logging.info(f"UID {message_id}: {bewertung["result"]["kategorie"]} / {bewertung["result"]["aktion"]} ({round(bewertung["kategorie_sicherheit"] * 100, 1)}% / {round(bewertung["aktion_sicherheit"] * 100, 1)}%).") # Schreibt UID, Kategorie, Aktion und beide Sicherheiten ins Log. Absender und Betreff bewusst nicht (Datenschutz).
 
