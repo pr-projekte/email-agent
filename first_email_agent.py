@@ -54,21 +54,25 @@ for message_id in new_uid: # Für jede UID in new_uid passiert folgendes:
         print(f"Ollama nicht erreichbar, Lauf abgebrochen bei UID {message_id}: {fehler}")
         sys.exit(1)
 
-    logging.info(f"UID {message_id}: {bewertung["result"]["kategorie"]} / {bewertung["result"]["aktion"]} ({round(bewertung["kategorie_sicherheit"] * 100, 1)}% / {round(bewertung["aktion_sicherheit"] * 100, 1)}%).") # Schreibt UID, Kategorie, Aktion und beide Sicherheiten ins Log. Absender und Betreff bewusst nicht (Datenschutz).
+    if bewertung["gueltig"]:
+        logging.info(f"UID {message_id}: {bewertung["result"]["kategorie"]} / {bewertung["result"]["aktion"]} ({round(bewertung["kategorie_sicherheit"] * 100, 1)}% / {round(bewertung["aktion_sicherheit"] * 100, 1)}%).") # Schreibt UID, Kategorie, Aktion und beide Sicherheiten ins Log. Absender und Betreff bewusst nicht (Datenschutz).
 
-    if bewertung["kategorie_unsicher"]: # Liegt die Kategorie unter der Schwelle (80 %), kommt eine Warnung ins Log.
-        logging.warning(f"UID {message_id}: Kategorie unsicher.")
-    if bewertung["aktion_unsicher"]: # Liegt die Aktion unter der Schwelle und hat die Kategorie keine feste Aktion, kommt eine Warnung ins Log.
-        logging.warning(f"UID {message_id}: Aktion unsicher.")
-    if bewertung["kontrollfehler"]: # Passt der eingesammelte Token-Text nicht zur Antwort des Modells, gehören die Sicherheiten zum falschen Text: Warnung ins Log.
-        logging.warning(f"UID {message_id}: Kontrollfehler, Sicherheiten nicht verlässlich.")
+        if bewertung["kategorie_unsicher"]: # Liegt die Kategorie unter der Schwelle (80 %), kommt eine Warnung ins Log.
+            logging.warning(f"UID {message_id}: Kategorie unsicher.")
+        if bewertung["aktion_unsicher"]: # Liegt die Aktion unter der Schwelle und hat die Kategorie keine feste Aktion, kommt eine Warnung ins Log.
+            logging.warning(f"UID {message_id}: Aktion unsicher.")
+        if bewertung["kontrollfehler"]: # Passt der eingesammelte Token-Text nicht zur Antwort des Modells, gehören die Sicherheiten zum falschen Text: Warnung ins Log.
+            logging.warning(f"UID {message_id}: Kontrollfehler, Sicherheiten nicht verlässlich.")
 
-    # Gibt die bewertung geordnet aus.
-    print(
-        f"Kategorie: {bewertung["result"]["kategorie"]}\n"
-        f"Aktion: {bewertung["result"]["aktion"]}\n"
-        f"Sicherheiten: {round(bewertung["kategorie_sicherheit"] * 100, 1)} und {round(bewertung["aktion_sicherheit"] * 100, 1)}"
-          )
+        # Gibt die bewertung geordnet aus.
+        print(
+            f"Kategorie: {bewertung["result"]["kategorie"]}\n"
+            f"Aktion: {bewertung["result"]["aktion"]}\n"
+            f"Sicherheiten: {round(bewertung["kategorie_sicherheit"] * 100, 1)} und {round(bewertung["aktion_sicherheit"] * 100, 1)}"
+            )
+    else:
+        logging.error(f"UID {message_id}: ungültige Modellantwort, Mail ohne Urteil weitergeleitet.")
+        print(f"UID {message_id}: ungültige Modellantwort, Mail ohne Urteil weitergeleitet.")
 
     # Sendet eine Nachricht mit Absender, Betreff, Inhalt und die Namen der Anhänge an Telegram. In send_error ist entweder None(wenn alles klappt) oder ein Fehlertext(bei einem Fehler).
     send_error = telegram_tools.send_telegram_message(
