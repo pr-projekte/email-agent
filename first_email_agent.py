@@ -6,7 +6,7 @@ import uid_speicher # Importiert das "Gedächnis" von dem Agenten.
 import urteil # urteil.py gibt ein Dict mit der aufgeräumten Antwort, dem Urteil, den Token-Texten mit ihren Sicherheiten und den Prüfungsergebnissen.
 import logging # Ermöglicht logging.
 import sys # Ermöglicht sys.exit(), um den Agenten bei einem Fehler sauber abzubrechen.
-import requests # Wird hier nur für den Fehlernamen requests.exceptions.ConnectionError gebraucht (Ollama nicht erreichbar).
+import requests # Wird hier nur für die Fehlernamen requests.exceptions.Timeout und requests.exceptions.ConnectionError gebraucht (Ollama zu langsam oder nicht erreichbar).
 from dotenv import load_dotenv # Importiert das laden aus der .env.
 
 load_dotenv() # Läd die daten aus der .env in die Umgebungvariablen.
@@ -48,14 +48,14 @@ for message_id in new_uid: # Für jede UID in new_uid passiert folgendes:
     message_text = mail_tools.get_message_text(message) # Holt die tatsächliche Mail-Nachricht.
     mail_text = f"Von: {message['From']}\nBetreff: {message['Subject']}\nDatum: {message['Date']}\n\n{message_text}" # Setzt die Mail aus Absender, Betreff, Datum und Inhalt zusammen.
 
-    # Läuft Ollama nicht, bricht der Agent ab, OHNE die UID dieser Mail zu speichern – der nächste Lauf holt sie nach.
+    # Läuft Ollama nicht oder antwortet zu langsam, bricht der Agent ab, OHNE die UID dieser Mail zu speichern – der nächste Lauf holt sie nach.
     try:
         bewertung = urteil.urteilen(mail_text) # Benutzt die Funktionen aus urteil.py und speichert das Ergebnis in "bewertung".
 
-    except requests.exceptions.Timeout as fehler:
-        logging.error(f"Ollama antwortet nicht (Zeitüberschreitung), Lauf abgebrochen bei UID {message_id}: {fehler}")
-        print(f"Ollama antwortet nicht (Zeitüberschreitung), Lauf abgebrochen bei UID {message_id}: {fehler}")
-        sys.exit(1)
+    except requests.exceptions.Timeout as fehler: # Ollama antwortet nicht innerhalb des timeout aus urteil.py (120 Sekunden). Steht über ConnectionError, weil ConnectTimeout zu beiden Familien gehört – sonst käme er als "nicht erreichbar" ins Log.
+        logging.error(f"Ollama antwortet nicht (Zeitüberschreitung), Lauf abgebrochen bei UID {message_id}: {fehler}") # Grund und UID ins Log.
+        print(f"Ollama antwortet nicht (Zeitüberschreitung), Lauf abgebrochen bei UID {message_id}: {fehler}") # Derselbe Text im Terminal.
+        sys.exit(1) # Abbruch mit Exit-Code 1, wie bei "Ollama nicht erreichbar". Der nächste Lauf versucht es mit derselben Mail noch einmal.
 
     except requests.exceptions.ConnectionError as fehler: # Ollama nicht erreichbar (z. B. nicht gestartet). Der Fehler entsteht in urteil.py und wandert bis hierher.
         logging.error(f"Ollama nicht erreichbar, Lauf abgebrochen bei UID {message_id}: {fehler}") # Grund und UID ins Log.
@@ -90,7 +90,7 @@ for message_id in new_uid: # Für jede UID in new_uid passiert folgendes:
         f"Inhalt:\n{message_text}\n"
         f"Anhänge:\n{', '.join(attachment_names)}"
     )
-    # Wenn send_error einen Fehlertext enthält (falscher Statuscode oder Telegram nicht erreichbar), wird er ins Log geschrieben (als ERROR) und im Terminal ausgegeben. Der Lauf geht weiter.
+    # Wenn send_error einen Fehlertext enthält (falscher Statuscode, Telegram nicht erreichbar oder zu langsam), wird er ins Log geschrieben (als ERROR) und im Terminal ausgegeben. Der Lauf geht weiter.
     if send_error is not None:
         logging.error(send_error)
         print(send_error)
