@@ -1,13 +1,13 @@
- mail_01.txt | Soll: Mangel/Beschwerden / sofort | Modell: Mangel/Beschwerden 97.1 % / sofort 86.9 %
- mail_02.txt | Soll: Werbung / ignorieren | Modell: Betrugsverdacht 56.5 % / prüfen 99.0 % | Kategorie unsicher
+ mail_01.txt | Soll: Mangel/Beschwerden / sofort | Modell: Mangel/Beschwerden 97.6 % / sofort 84.5 %
+ mail_02.txt | Soll: Werbung / ignorieren | Modell: Betrugsverdacht 96.5 % / prüfen 99.6 %
 Kategorie: 1/2
 Aktion: 1/2
 Fälschlich ignoriert: 0/2
-Kategorie unsicher: 1/2
+Kategorie unsicher: 0/2
 Aktion unsicher: 0/2
 Kontrollfehler: 0/2
-Kategorie abgefangen: 1/2
-Kategorie durchgerutscht: 0/2
+Kategorie abgefangen: 0/2
+Kategorie durchgerutscht: 1/2
 Aktion abgefangen: 0/2
 Aktion durchgerutscht: 1/2
 -------------------------------------------------
@@ -22,10 +22,10 @@ Betrugsverdacht: Kategorie: 0/0 richtig | Aktion: 0/0 richtig
 Sonstiges: Kategorie: 0/0 richtig | Aktion: 0/0 richtig
 -------------------------------------------------
 Schwelle: 0.5 | Kategorie: 0 abgefangen, 0 Fehlalarme | Aktion: 0 abgefangen, 0 Fehlalarme
-Schwelle: 0.6 | Kategorie: 1 abgefangen, 0 Fehlalarme | Aktion: 0 abgefangen, 0 Fehlalarme
-Schwelle: 0.7 | Kategorie: 1 abgefangen, 0 Fehlalarme | Aktion: 0 abgefangen, 0 Fehlalarme
-Schwelle: 0.8 | Kategorie: 1 abgefangen, 0 Fehlalarme | Aktion: 0 abgefangen, 0 Fehlalarme
-Schwelle: 0.9 | Kategorie: 1 abgefangen, 0 Fehlalarme | Aktion: 0 abgefangen, 1 Fehlalarme
-Schwelle: 0.95 | Kategorie: 1 abgefangen, 0 Fehlalarme | Aktion: 0 abgefangen, 1 Fehlalarme
+Schwelle: 0.6 | Kategorie: 0 abgefangen, 0 Fehlalarme | Aktion: 0 abgefangen, 0 Fehlalarme
+Schwelle: 0.7 | Kategorie: 0 abgefangen, 0 Fehlalarme | Aktion: 0 abgefangen, 0 Fehlalarme
+Schwelle: 0.8 | Kategorie: 0 abgefangen, 0 Fehlalarme | Aktion: 0 abgefangen, 0 Fehlalarme
+Schwelle: 0.9 | Kategorie: 0 abgefangen, 0 Fehlalarme | Aktion: 0 abgefangen, 1 Fehlalarme
+Schwelle: 0.95 | Kategorie: 0 abgefangen, 0 Fehlalarme | Aktion: 0 abgefangen, 1 Fehlalarme
 Schwelle: 0.99 | Kategorie: 1 abgefangen, 1 Fehlalarme | Aktion: 0 abgefangen, 1 Fehlalarme
 Ungültig: 0/2
