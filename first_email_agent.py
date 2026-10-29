@@ -51,6 +51,12 @@ for message_id in new_uid: # Für jede UID in new_uid passiert folgendes:
     # Läuft Ollama nicht, bricht der Agent ab, OHNE die UID dieser Mail zu speichern – der nächste Lauf holt sie nach.
     try:
         bewertung = urteil.urteilen(mail_text) # Benutzt die Funktionen aus urteil.py und speichert das Ergebnis in "bewertung".
+
+    except requests.exceptions.Timeout as fehler:
+        logging.error(f"Ollama antwortet nicht (Zeitüberschreitung), Lauf abgebrochen bei UID {message_id}: {fehler}")
+        print(f"Ollama antwortet nicht (Zeitüberschreitung), Lauf abgebrochen bei UID {message_id}: {fehler}")
+        sys.exit(1)
+
     except requests.exceptions.ConnectionError as fehler: # Ollama nicht erreichbar (z. B. nicht gestartet). Der Fehler entsteht in urteil.py und wandert bis hierher.
         logging.error(f"Ollama nicht erreichbar, Lauf abgebrochen bei UID {message_id}: {fehler}") # Grund und UID ins Log.
         print(f"Ollama nicht erreichbar, Lauf abgebrochen bei UID {message_id}: {fehler}") # Derselbe Text im Terminal.

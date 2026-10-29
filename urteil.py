@@ -65,7 +65,8 @@ def urteilen(text):
             "stream": False, # Damit Ollama immer eine einzige Antwort als JSON liefert.
             "options": {"temperature": 0}, # Damit das LLm immer die Antwort(Token) mit der höchsten warscheinlichkeit auswählt damit läufe konstant sind.
             "logprobs": True # Gibt die Warscheinlichkeiten der Antworten mit zurück.
-        }
+        },
+        timeout=120
         )
 
     raw_answer = response.json()["response"] # Die Rohantwort vom LLM.
