@@ -65,7 +65,8 @@ def urteilen(text):
             "stream": False, # Damit Ollama immer eine einzige Antwort als JSON liefert.
             "options": {"temperature": 0}, # Damit das LLm immer die Antwort(Token) mit der höchsten warscheinlichkeit auswählt damit läufe konstant sind.
             "logprobs": True # Gibt die Warscheinlichkeiten der Antworten mit zurück.
-        }
+        },
+        timeout=120 # Wartet höchstens 120 Sekunden auf die Antwort, ohne timeout würde requests unbegrenzt warten. Großzügig, weil der erste Aufruf eines Laufs rund 25 Sekunden braucht (Ollama lädt das Modell).
         )
 
     raw_answer = response.json()["response"] # Die Rohantwort vom LLM.

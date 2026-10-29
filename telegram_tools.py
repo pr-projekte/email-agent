@@ -15,8 +15,11 @@ def send_telegram_message(text):
             TELEGRAM_URL, params={
                 "chat_id": CHAT_ID,
                 "text": text
-            }
+            },
+            timeout=10
         )
+    except requests.exceptions.Timeout:
+        return "Telegram antwortet nicht (Zeitüberschreitung)."
     except requests.exceptions.ConnectionError:
         return "Telegram nicht erreichbar (Verbindungsfehler)."
     
