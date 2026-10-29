@@ -1,144 +1,144 @@
- mail_001.txt | Soll: Mieteranfrage / heute | Modell: Mieteranfrage 93.6 % / heute 99.0 %
- mail_002.txt | Soll: Mangel/Beschwerden / sofort | Modell: Mangel/Beschwerden 96.9 % / heute 96.9 %
- mail_003.txt | Soll: Rechnung / heute | Modell: Rechnung 93.7 % / heute 98.8 %
- mail_004.txt | Soll: Bewerbung / heute | Modell: Bewerbung 100.0 % / heute 94.0 %
+ mail_001.txt | Soll: Mieteranfrage / heute | Modell: Mieteranfrage 94.3 % / heute 99.2 %
+ mail_002.txt | Soll: Mangel/Beschwerden / sofort | Modell: Mangel/Beschwerden 98.0 % / heute 95.8 %
+ mail_003.txt | Soll: Rechnung / heute | Modell: Rechnung 95.1 % / heute 98.9 %
+ mail_004.txt | Soll: Bewerbung / heute | Modell: Bewerbung 100.0 % / heute 94.8 %
  mail_005.txt | Soll: Dienstleister / heute | Modell: Dienstleister 99.8 % / heute 99.0 %
- mail_006.txt | Soll: Betrugsverdacht / prüfen | Modell: Behörde 96.3 % / heute 98.5 %
- mail_007.txt | Soll: Mangel/Beschwerden / heute | Modell: Mangel/Beschwerden 96.0 % / sofort 98.1 %
- mail_008.txt | Soll: Bewerbung / heute | Modell: Mieteranfrage 90.9 % / heute 91.6 %
- mail_009.txt | Soll: Mangel/Beschwerden / heute | Modell: Mangel/Beschwerden 97.1 % / sofort 99.7 %
- mail_010.txt | Soll: Rechnung / heute | Modell: Rechnung 97.7 % / heute 99.0 %
- mail_011.txt | Soll: Behörde / heute | Modell: Behörde 99.8 % / heute 97.4 %
- mail_012.txt | Soll: Mangel/Beschwerden / sofort | Modell: Mangel/Beschwerden 97.2 % / sofort 99.6 %
+ mail_006.txt | Soll: Betrugsverdacht / prüfen | Modell: Behörde 93.6 % / heute 98.3 %
+ mail_007.txt | Soll: Mangel/Beschwerden / heute | Modell: Mangel/Beschwerden 96.2 % / sofort 98.4 %
+ mail_008.txt | Soll: Bewerbung / heute | Modell: Mieteranfrage 89.8 % / heute 91.8 %
+ mail_009.txt | Soll: Mangel/Beschwerden / heute | Modell: Mangel/Beschwerden 97.2 % / sofort 99.8 %
+ mail_010.txt | Soll: Rechnung / heute | Modell: Rechnung 98.1 % / heute 99.1 %
+ mail_011.txt | Soll: Behörde / heute | Modell: Behörde 99.8 % / heute 97.6 %
+ mail_012.txt | Soll: Mangel/Beschwerden / sofort | Modell: Mangel/Beschwerden 97.2 % / sofort 99.7 %
  mail_013.txt | Soll: Werbung / ignorieren | Modell: Werbung 99.9 % / ignorieren 99.6 %
- mail_014.txt | Soll: Betrugsverdacht / prüfen | Modell: Betrugsverdacht 98.7 % / prüfen 99.5 %
- mail_015.txt | Soll: Mangel/Beschwerden / sofort | Modell: Mangel/Beschwerden 96.9 % / heute 97.0 %
- mail_016.txt | Soll: Bewerbung / heute | Modell: Bewerbung 100.0 % / heute 86.8 %
- mail_017.txt | Soll: Betrugsverdacht / prüfen | Modell: Betrugsverdacht 97.9 % / prüfen 96.9 %
- mail_018.txt | Soll: Mieteranfrage / heute | Modell: Mieteranfrage 94.7 % / heute 99.0 %
- mail_019.txt | Soll: Mieteranfrage / heute | Modell: Mieteranfrage 98.6 % / heute 98.9 %
- mail_020.txt | Soll: Mangel/Beschwerden / heute | Modell: Mangel/Beschwerden 97.1 % / sofort 97.5 %
- mail_021.txt | Soll: Dienstleister / heute | Modell: Dienstleister 99.8 % / heute 99.1 %
- mail_022.txt | Soll: Betrugsverdacht / prüfen | Modell: Betrugsverdacht 99.2 % / prüfen 99.7 %
- mail_023.txt | Soll: Behörde / heute | Modell: Behörde 99.3 % / heute 92.5 %
- mail_024.txt | Soll: Mieteranfrage / heute | Modell: Mieteranfrage 41.2 % / heute 97.6 % | Kategorie unsicher
- mail_025.txt | Soll: Werbung / ignorieren | Modell: Betrugsverdacht 99.9 % / prüfen 98.9 %
- mail_026.txt | Soll: Mieteranfrage / heute | Modell: Mieteranfrage 97.7 % / heute 99.2 %
- mail_027.txt | Soll: Rechnung / heute | Modell: Rechnung 79.1 % / heute 98.1 % | Kategorie unsicher
- mail_028.txt | Soll: Dienstleister / heute | Modell: Dienstleister 99.4 % / heute 99.1 %
- mail_029.txt | Soll: Betrugsverdacht / prüfen | Modell: Betrugsverdacht 96.9 % / prüfen 98.1 %
- mail_030.txt | Soll: Mangel/Beschwerden / heute | Modell: Mangel/Beschwerden 97.9 % / sofort 96.7 %
- mail_031.txt | Soll: Behörde / heute | Modell: Behörde 99.8 % / heute 97.9 %
- mail_032.txt | Soll: Bewerbung / heute | Modell: Bewerbung 100.0 % / heute 87.7 %
- mail_033.txt | Soll: Werbung / ignorieren | Modell: Werbung 99.9 % / ignorieren 99.1 %
- mail_034.txt | Soll: Mieteranfrage / heute | Modell: Mieteranfrage 87.3 % / heute 98.9 %
- mail_035.txt | Soll: Betrugsverdacht / prüfen | Modell: Betrugsverdacht 99.9 % / prüfen 98.8 %
- mail_036.txt | Soll: Dienstleister / heute | Modell: Dienstleister 99.7 % / heute 98.3 %
- mail_037.txt | Soll: Sonstiges / heute | Modell: Sonstiges 58.5 % / heute 88.4 % | Kategorie unsicher
- mail_038.txt | Soll: Mangel/Beschwerden / sofort | Modell: Mangel/Beschwerden 97.4 % / sofort 92.5 %
- mail_039.txt | Soll: Rechnung / heute | Modell: Rechnung 96.2 % / heute 98.9 %
- mail_040.txt | Soll: Mieteranfrage / heute | Modell: Mieteranfrage 97.2 % / heute 99.0 %
- mail_041.txt | Soll: Behörde / heute | Modell: Behörde 96.5 % / heute 97.9 %
- mail_042.txt | Soll: Werbung / ignorieren | Modell: Werbung 99.3 % / ignorieren 99.7 %
- mail_043.txt | Soll: Betrugsverdacht / prüfen | Modell: Betrugsverdacht 78.0 % / prüfen 99.0 % | Kategorie unsicher
+ mail_014.txt | Soll: Betrugsverdacht / prüfen | Modell: Betrugsverdacht 98.8 % / prüfen 99.6 %
+ mail_015.txt | Soll: Mangel/Beschwerden / sofort | Modell: Mangel/Beschwerden 97.8 % / heute 96.6 %
+ mail_016.txt | Soll: Bewerbung / heute | Modell: Bewerbung 100.0 % / heute 84.6 %
+ mail_017.txt | Soll: Betrugsverdacht / prüfen | Modell: Betrugsverdacht 97.5 % / prüfen 98.3 %
+ mail_018.txt | Soll: Mieteranfrage / heute | Modell: Mieteranfrage 94.9 % / heute 99.1 %
+ mail_019.txt | Soll: Mieteranfrage / heute | Modell: Mieteranfrage 98.9 % / heute 99.0 %
+ mail_020.txt | Soll: Mangel/Beschwerden / heute | Modell: Mangel/Beschwerden 97.5 % / sofort 97.5 %
+ mail_021.txt | Soll: Dienstleister / heute | Modell: Dienstleister 99.7 % / heute 99.0 %
+ mail_022.txt | Soll: Betrugsverdacht / prüfen | Modell: Betrugsverdacht 98.9 % / prüfen 99.8 %
+ mail_023.txt | Soll: Behörde / heute | Modell: Behörde 98.3 % / heute 89.3 %
+ mail_024.txt | Soll: Mieteranfrage / heute | Modell: Sonstiges 36.0 % / heute 95.6 % | Kategorie unsicher
+ mail_025.txt | Soll: Werbung / ignorieren | Modell: Betrugsverdacht 99.9 % / prüfen 99.4 %
+ mail_026.txt | Soll: Mieteranfrage / heute | Modell: Mieteranfrage 98.1 % / heute 99.2 %
+ mail_027.txt | Soll: Rechnung / heute | Modell: Rechnung 78.2 % / heute 98.1 % | Kategorie unsicher
+ mail_028.txt | Soll: Dienstleister / heute | Modell: Dienstleister 99.2 % / heute 99.1 %
+ mail_029.txt | Soll: Betrugsverdacht / prüfen | Modell: Betrugsverdacht 89.2 % / prüfen 99.2 %
+ mail_030.txt | Soll: Mangel/Beschwerden / heute | Modell: Mangel/Beschwerden 98.1 % / sofort 96.9 %
+ mail_031.txt | Soll: Behörde / heute | Modell: Behörde 99.8 % / heute 97.5 %
+ mail_032.txt | Soll: Bewerbung / heute | Modell: Bewerbung 100.0 % / heute 90.1 %
+ mail_033.txt | Soll: Werbung / ignorieren | Modell: Werbung 99.9 % / ignorieren 99.2 %
+ mail_034.txt | Soll: Mieteranfrage / heute | Modell: Mieteranfrage 81.1 % / heute 99.0 %
+ mail_035.txt | Soll: Betrugsverdacht / prüfen | Modell: Betrugsverdacht 99.9 % / prüfen 99.4 %
+ mail_036.txt | Soll: Dienstleister / heute | Modell: Dienstleister 99.8 % / heute 98.4 %
+ mail_037.txt | Soll: Sonstiges / heute | Modell: Sonstiges 59.5 % / heute 92.3 % | Kategorie unsicher
+ mail_038.txt | Soll: Mangel/Beschwerden / sofort | Modell: Mangel/Beschwerden 98.1 % / sofort 93.6 %
+ mail_039.txt | Soll: Rechnung / heute | Modell: Rechnung 96.0 % / heute 98.9 %
+ mail_040.txt | Soll: Mieteranfrage / heute | Modell: Mieteranfrage 97.7 % / heute 99.0 %
+ mail_041.txt | Soll: Behörde / heute | Modell: Behörde 94.9 % / heute 98.2 %
+ mail_042.txt | Soll: Werbung / ignorieren | Modell: Werbung 99.2 % / ignorieren 99.7 %
+ mail_043.txt | Soll: Betrugsverdacht / prüfen | Modell: Betrugsverdacht 98.4 % / prüfen 99.5 %
  mail_044.txt | Soll: Dienstleister / heute | Modell: Dienstleister 99.7 % / heute 99.1 %
- mail_045.txt | Soll: Bewerbung / heute | Modell: Bewerbung 99.9 % / heute 93.8 %
- mail_046.txt | Soll: Mangel/Beschwerden / sofort | Modell: Mangel/Beschwerden 97.1 % / sofort 67.7 % | Aktion unsicher
- mail_047.txt | Soll: Rechnung / heute | Modell: Rechnung 95.8 % / heute 98.1 %
- mail_048.txt | Soll: Behörde / heute | Modell: Behörde 98.5 % / heute 94.7 %
- mail_049.txt | Soll: Sonstiges / heute | Modell: Dienstleister 35.2 % / heute 89.9 % | Kategorie unsicher
- mail_050.txt | Soll: Betrugsverdacht / prüfen | Modell: Betrugsverdacht 95.0 % / prüfen 99.7 %
- mail_051.txt | Soll: Mieteranfrage / heute | Modell: Mieteranfrage 96.0 % / heute 99.5 %
- mail_052.txt | Soll: Rechnung / heute | Modell: Rechnung 97.3 % / heute 98.9 %
- mail_053.txt | Soll: Dienstleister / heute | Modell: Dienstleister 99.8 % / heute 99.3 %
- mail_054.txt | Soll: Betrugsverdacht / prüfen | Modell: Betrugsverdacht 99.8 % / prüfen 99.4 %
- mail_055.txt | Soll: Mangel/Beschwerden / heute | Modell: Mangel/Beschwerden 97.7 % / heute 94.5 %
- mail_056.txt | Soll: Behörde / heute | Modell: Behörde 99.8 % / heute 99.1 %
- mail_057.txt | Soll: Bewerbung / heute | Modell: Bewerbung 100.0 % / heute 88.1 %
+ mail_045.txt | Soll: Bewerbung / heute | Modell: Bewerbung 99.9 % / heute 94.8 %
+ mail_046.txt | Soll: Mangel/Beschwerden / sofort | Modell: Mangel/Beschwerden 98.2 % / sofort 74.8 % | Aktion unsicher
+ mail_047.txt | Soll: Rechnung / heute | Modell: Rechnung 96.4 % / heute 98.2 %
+ mail_048.txt | Soll: Behörde / heute | Modell: Behörde 98.4 % / heute 95.2 %
+ mail_049.txt | Soll: Sonstiges / heute | Modell: Mieteranfrage 36.1 % / heute 66.5 % | Kategorie unsicher | Aktion unsicher
+ mail_050.txt | Soll: Betrugsverdacht / prüfen | Modell: Betrugsverdacht 94.0 % / prüfen 99.8 %
+ mail_051.txt | Soll: Mieteranfrage / heute | Modell: Mieteranfrage 97.0 % / heute 99.5 %
+ mail_052.txt | Soll: Rechnung / heute | Modell: Rechnung 97.2 % / heute 98.9 %
+ mail_053.txt | Soll: Dienstleister / heute | Modell: Dienstleister 99.9 % / heute 99.3 %
+ mail_054.txt | Soll: Betrugsverdacht / prüfen | Modell: Betrugsverdacht 99.9 % / prüfen 99.7 %
+ mail_055.txt | Soll: Mangel/Beschwerden / heute | Modell: Mangel/Beschwerden 97.7 % / heute 91.9 %
+ mail_056.txt | Soll: Behörde / heute | Modell: Behörde 99.7 % / heute 99.1 %
+ mail_057.txt | Soll: Bewerbung / heute | Modell: Bewerbung 100.0 % / heute 87.3 %
  mail_058.txt | Soll: Werbung / ignorieren | Modell: Werbung 99.8 % / ignorieren 99.7 %
- mail_059.txt | Soll: Mieteranfrage / heute | Modell: Mieteranfrage 97.9 % / heute 99.1 %
- mail_060.txt | Soll: Betrugsverdacht / prüfen | Modell: Sonstiges 53.0 % / heute 94.4 % | Kategorie unsicher
- mail_061.txt | Soll: Dienstleister / heute | Modell: Dienstleister 99.3 % / heute 99.1 %
- mail_062.txt | Soll: Sonstiges / heute | Modell: Mieteranfrage 56.0 % / heute 61.0 % | Kategorie unsicher | Aktion unsicher
- mail_063.txt | Soll: Mangel/Beschwerden / heute | Modell: Mangel/Beschwerden 97.4 % / sofort 92.7 %
- mail_064.txt | Soll: Rechnung / heute | Modell: Rechnung 86.7 % / heute 98.6 %
- mail_065.txt | Soll: Mieteranfrage / heute | Modell: Mieteranfrage 98.1 % / heute 99.3 %
- mail_066.txt | Soll: Behörde / heute | Modell: Behörde 99.9 % / heute 96.2 %
- mail_067.txt | Soll: Werbung / ignorieren | Modell: Werbung 99.5 % / ignorieren 99.5 %
+ mail_059.txt | Soll: Mieteranfrage / heute | Modell: Mieteranfrage 98.0 % / heute 99.1 %
+ mail_060.txt | Soll: Betrugsverdacht / prüfen | Modell: Betrugsverdacht 99.3 % / prüfen 97.2 %
+ mail_061.txt | Soll: Dienstleister / heute | Modell: Dienstleister 99.1 % / heute 99.2 %
+ mail_062.txt | Soll: Sonstiges / heute | Modell: Mieteranfrage 64.5 % / heute 67.1 % | Kategorie unsicher | Aktion unsicher
+ mail_063.txt | Soll: Mangel/Beschwerden / heute | Modell: Mangel/Beschwerden 97.7 % / sofort 91.8 %
+ mail_064.txt | Soll: Rechnung / heute | Modell: Rechnung 85.6 % / heute 98.6 %
+ mail_065.txt | Soll: Mieteranfrage / heute | Modell: Mieteranfrage 98.2 % / heute 99.3 %
+ mail_066.txt | Soll: Behörde / heute | Modell: Behörde 99.9 % / heute 95.1 %
+ mail_067.txt | Soll: Werbung / ignorieren | Modell: Werbung 99.6 % / ignorieren 99.5 %
  mail_068.txt | Soll: Betrugsverdacht / prüfen | Modell: Betrugsverdacht 99.8 % / prüfen 99.8 %
- mail_069.txt | Soll: Dienstleister / heute | Modell: Dienstleister 98.9 % / heute 99.0 %
- mail_070.txt | Soll: Bewerbung / heute | Modell: Bewerbung 99.9 % / heute 82.9 %
- mail_071.txt | Soll: Mangel/Beschwerden / sofort | Modell: Mangel/Beschwerden 96.9 % / sofort 97.2 %
- mail_072.txt | Soll: Rechnung / heute | Modell: Rechnung 98.2 % / heute 98.8 %
+ mail_069.txt | Soll: Dienstleister / heute | Modell: Dienstleister 98.7 % / heute 99.0 %
+ mail_070.txt | Soll: Bewerbung / heute | Modell: Bewerbung 99.9 % / heute 85.3 %
+ mail_071.txt | Soll: Mangel/Beschwerden / sofort | Modell: Mangel/Beschwerden 97.5 % / sofort 97.3 %
+ mail_072.txt | Soll: Rechnung / heute | Modell: Rechnung 97.9 % / heute 98.9 %
  mail_073.txt | Soll: Behörde / heute | Modell: Behörde 99.8 % / heute 99.2 %
- mail_074.txt | Soll: Sonstiges / heute | Modell: Mieteranfrage 46.1 % / heute 93.6 % | Kategorie unsicher
- mail_075.txt | Soll: Betrugsverdacht / prüfen | Modell: Betrugsverdacht 96.5 % / prüfen 97.6 %
- mail_076.txt | Soll: Behörde / heute | Modell: Behörde 99.8 % / heute 98.9 %
- mail_077.txt | Soll: Mangel/Beschwerden / heute | Modell: Mangel/Beschwerden 96.4 % / sofort 98.7 %
+ mail_074.txt | Soll: Sonstiges / heute | Modell: Mieteranfrage 56.9 % / heute 94.1 % | Kategorie unsicher
+ mail_075.txt | Soll: Betrugsverdacht / prüfen | Modell: Betrugsverdacht 96.1 % / prüfen 98.6 %
+ mail_076.txt | Soll: Behörde / heute | Modell: Behörde 99.8 % / heute 98.8 %
+ mail_077.txt | Soll: Mangel/Beschwerden / heute | Modell: Mangel/Beschwerden 97.9 % / sofort 98.7 %
  mail_078.txt | Soll: Dienstleister / heute | Modell: Dienstleister 99.7 % / heute 99.2 %
- mail_079.txt | Soll: Betrugsverdacht / prüfen | Modell: Betrugsverdacht 95.9 % / prüfen 98.6 %
- mail_080.txt | Soll: Mieteranfrage / heute | Modell: Mieteranfrage 97.3 % / heute 99.3 %
- mail_081.txt | Soll: Rechnung / heute | Modell: Rechnung 90.3 % / heute 98.7 %
- mail_082.txt | Soll: Bewerbung / heute | Modell: Bewerbung 99.9 % / heute 92.0 %
- mail_083.txt | Soll: Werbung / ignorieren | Modell: Werbung 98.0 % / ignorieren 99.3 %
- mail_084.txt | Soll: Mangel/Beschwerden / heute | Modell: Mangel/Beschwerden 91.7 % / heute 70.9 % | Aktion unsicher
- mail_085.txt | Soll: Betrugsverdacht / prüfen | Modell: Betrugsverdacht 97.7 % / prüfen 99.4 %
- mail_086.txt | Soll: Dienstleister / heute | Modell: Dienstleister 99.8 % / heute 99.2 %
- mail_087.txt | Soll: Sonstiges / heute | Modell: Sonstiges 49.6 % / heute 94.3 % | Kategorie unsicher
- mail_088.txt | Soll: Mieteranfrage / heute | Modell: Mieteranfrage 97.1 % / heute 96.9 %
- mail_089.txt | Soll: Rechnung / heute | Modell: Rechnung 93.9 % / heute 98.9 %
- mail_090.txt | Soll: Mieteranfrage / heute | Modell: Mieteranfrage 99.4 % / heute 96.9 %
- mail_091.txt | Soll: Behörde / heute | Modell: Behörde 99.9 % / sofort 90.3 %
- mail_092.txt | Soll: Werbung / ignorieren | Modell: Werbung 96.2 % / ignorieren 99.2 %
- mail_093.txt | Soll: Betrugsverdacht / prüfen | Modell: Betrugsverdacht 99.4 % / prüfen 99.7 %
+ mail_079.txt | Soll: Betrugsverdacht / prüfen | Modell: Betrugsverdacht 94.3 % / prüfen 99.2 %
+ mail_080.txt | Soll: Mieteranfrage / heute | Modell: Mieteranfrage 97.6 % / heute 99.3 %
+ mail_081.txt | Soll: Rechnung / heute | Modell: Rechnung 90.5 % / heute 98.9 %
+ mail_082.txt | Soll: Bewerbung / heute | Modell: Bewerbung 99.9 % / heute 92.8 %
+ mail_083.txt | Soll: Werbung / ignorieren | Modell: Werbung 97.4 % / ignorieren 99.3 %
+ mail_084.txt | Soll: Mangel/Beschwerden / heute | Modell: Mangel/Beschwerden 93.6 % / heute 58.4 % | Aktion unsicher
+ mail_085.txt | Soll: Betrugsverdacht / prüfen | Modell: Betrugsverdacht 92.9 % / prüfen 99.6 %
+ mail_086.txt | Soll: Dienstleister / heute | Modell: Dienstleister 99.7 % / heute 99.2 %
+ mail_087.txt | Soll: Sonstiges / heute | Modell: Sonstiges 45.2 % / heute 95.8 % | Kategorie unsicher
+ mail_088.txt | Soll: Mieteranfrage / heute | Modell: Mieteranfrage 97.3 % / heute 97.5 %
+ mail_089.txt | Soll: Rechnung / heute | Modell: Rechnung 91.6 % / heute 98.9 %
+ mail_090.txt | Soll: Mieteranfrage / heute | Modell: Mieteranfrage 99.6 % / heute 97.7 %
+ mail_091.txt | Soll: Behörde / heute | Modell: Behörde 99.8 % / sofort 90.7 %
+ mail_092.txt | Soll: Werbung / ignorieren | Modell: Werbung 95.5 % / ignorieren 99.1 %
+ mail_093.txt | Soll: Betrugsverdacht / prüfen | Modell: Betrugsverdacht 97.7 % / prüfen 99.8 %
  mail_094.txt | Soll: Dienstleister / heute | Modell: Dienstleister 99.6 % / heute 97.7 %
- mail_095.txt | Soll: Bewerbung / heute | Modell: Bewerbung 99.9 % / heute 87.0 %
- mail_096.txt | Soll: Mangel/Beschwerden / sofort | Modell: Mangel/Beschwerden 97.4 % / sofort 95.3 %
+ mail_095.txt | Soll: Bewerbung / heute | Modell: Bewerbung 99.9 % / heute 90.1 %
+ mail_096.txt | Soll: Mangel/Beschwerden / sofort | Modell: Mangel/Beschwerden 97.6 % / sofort 96.6 %
  mail_097.txt | Soll: Rechnung / heute | Modell: Rechnung 95.0 % / heute 98.2 %
- mail_098.txt | Soll: Behörde / heute | Modell: Behörde 99.9 % / heute 98.4 %
- mail_099.txt | Soll: Sonstiges / ignorieren | Modell: Sonstiges 82.5 % / ignorieren 60.9 % | Aktion unsicher
- mail_100.txt | Soll: Betrugsverdacht / prüfen | Modell: Betrugsverdacht 97.7 % / prüfen 99.7 %
- mail_101.txt | Soll: Dienstleister / heute | Modell: Dienstleister 99.1 % / zur Kenntnis 85.1 %
- mail_102.txt | Soll: Mieteranfrage / zur Kenntnis | Modell: Mieteranfrage 97.7 % / zur Kenntnis 57.0 % | Aktion unsicher
- mail_103.txt | Soll: Dienstleister / zur Kenntnis | Modell: Dienstleister 98.0 % / zur Kenntnis 95.9 %
- mail_104.txt | Soll: Rechnung / zur Kenntnis | Modell: Rechnung 97.3 % / zur Kenntnis 96.5 %
- mail_105.txt | Soll: Dienstleister / heute | Modell: Dienstleister 77.0 % / zur Kenntnis 97.7 % | Kategorie unsicher
- mail_106.txt | Soll: Dienstleister / zur Kenntnis | Modell: Rechnung 54.3 % / zur Kenntnis 95.6 % | Kategorie unsicher
- mail_107.txt | Soll: Mieteranfrage / heute | Modell: Dienstleister 47.1 % / zur Kenntnis 48.0 % | Kategorie unsicher | Aktion unsicher
- mail_108.txt | Soll: Dienstleister / zur Kenntnis | Modell: Dienstleister 94.2 % / zur Kenntnis 96.2 %
- mail_109.txt | Soll: Dienstleister / heute | Modell: Dienstleister 99.4 % / heute 97.9 %
- mail_110.txt | Soll: Dienstleister / heute | Modell: Dienstleister 90.1 % / heute 95.2 %
- mail_111.txt | Soll: Dienstleister / zur Kenntnis | Modell: Rechnung 49.5 % / zur Kenntnis 95.8 % | Kategorie unsicher
- mail_112.txt | Soll: Sonstiges / zur Kenntnis | Modell: Mangel/Beschwerden 38.7 % / zur Kenntnis 93.6 % | Kategorie unsicher
- mail_113.txt | Soll: Dienstleister / heute | Modell: Dienstleister 98.4 % / heute 97.1 %
- mail_114.txt | Soll: Dienstleister / heute | Modell: Dienstleister 98.9 % / heute 63.0 % | Aktion unsicher
- mail_115.txt | Soll: Dienstleister / zur Kenntnis | Modell: Dienstleister 84.6 % / zur Kenntnis 94.4 %
-Kategorie: 104/115
-Aktion: 100/115
+ mail_098.txt | Soll: Behörde / heute | Modell: Behörde 99.9 % / heute 98.3 %
+ mail_099.txt | Soll: Sonstiges / ignorieren | Modell: Sonstiges 81.0 % / ignorieren 49.9 % | Aktion unsicher
+ mail_100.txt | Soll: Betrugsverdacht / prüfen | Modell: Betrugsverdacht 98.2 % / prüfen 99.8 %
+ mail_101.txt | Soll: Dienstleister / heute | Modell: Dienstleister 99.2 % / zur Kenntnis 82.3 %
+ mail_102.txt | Soll: Mieteranfrage / zur Kenntnis | Modell: Mieteranfrage 97.3 % / zur Kenntnis 63.5 % | Aktion unsicher
+ mail_103.txt | Soll: Dienstleister / zur Kenntnis | Modell: Dienstleister 98.1 % / zur Kenntnis 96.0 %
+ mail_104.txt | Soll: Rechnung / zur Kenntnis | Modell: Rechnung 97.2 % / zur Kenntnis 96.2 %
+ mail_105.txt | Soll: Dienstleister / heute | Modell: Dienstleister 78.9 % / zur Kenntnis 97.5 % | Kategorie unsicher
+ mail_106.txt | Soll: Dienstleister / zur Kenntnis | Modell: Dienstleister 52.7 % / zur Kenntnis 95.9 % | Kategorie unsicher
+ mail_107.txt | Soll: Mieteranfrage / heute | Modell: Mieteranfrage 45.6 % / zur Kenntnis 47.4 % | Kategorie unsicher | Aktion unsicher
+ mail_108.txt | Soll: Dienstleister / zur Kenntnis | Modell: Dienstleister 95.4 % / zur Kenntnis 96.3 %
+ mail_109.txt | Soll: Dienstleister / heute | Modell: Dienstleister 99.4 % / heute 98.2 %
+ mail_110.txt | Soll: Dienstleister / heute | Modell: Dienstleister 83.0 % / heute 92.8 %
+ mail_111.txt | Soll: Dienstleister / zur Kenntnis | Modell: Rechnung 55.7 % / zur Kenntnis 95.5 % | Kategorie unsicher
+ mail_112.txt | Soll: Sonstiges / zur Kenntnis | Modell: Mangel/Beschwerden 55.0 % / zur Kenntnis 93.2 % | Kategorie unsicher
+ mail_113.txt | Soll: Dienstleister / heute | Modell: Dienstleister 96.0 % / heute 97.3 %
+ mail_114.txt | Soll: Dienstleister / heute | Modell: Dienstleister 98.6 % / heute 73.5 % | Aktion unsicher
+ mail_115.txt | Soll: Dienstleister / zur Kenntnis | Modell: Dienstleister 80.6 % / zur Kenntnis 94.8 %
+Kategorie: 106/115
+Aktion: 101/115
 Fälschlich ignoriert: 0/115
-Kategorie unsicher: 14/115
-Aktion unsicher: 7/115
+Kategorie unsicher: 12/115
+Aktion unsicher: 8/115
 Kontrollfehler: 0/115
-Kategorie abgefangen: 8/115
+Kategorie abgefangen: 6/115
 Kategorie durchgerutscht: 3/115
 Aktion abgefangen: 1/115
-Aktion durchgerutscht: 14/115
+Aktion durchgerutscht: 13/115
 -------------------------------------------------
 Mieteranfrage: Kategorie: 14/15 richtig | Aktion: 14/15 richtig
 Mangel/Beschwerden: Kategorie: 15/15 richtig | Aktion: 7/15 richtig
 Rechnung: Kategorie: 12/12 richtig | Aktion: 12/12 richtig
-Dienstleister: Kategorie: 20/22 richtig | Aktion: 20/22 richtig
+Dienstleister: Kategorie: 21/22 richtig | Aktion: 20/22 richtig
 Behörde: Kategorie: 11/11 richtig | Aktion: 10/11 richtig
 Bewerbung: Kategorie: 8/9 richtig | Aktion: 9/9 richtig
 Werbung: Kategorie: 7/8 richtig | Aktion: 7/8 richtig
-Betrugsverdacht: Kategorie: 14/16 richtig | Aktion: 14/16 richtig
+Betrugsverdacht: Kategorie: 15/16 richtig | Aktion: 15/16 richtig
 Sonstiges: Kategorie: 3/7 richtig | Aktion: 7/7 richtig
 -------------------------------------------------
-Schwelle: 0.5 | Kategorie: 5 abgefangen, 2 Fehlalarme | Aktion: 1 abgefangen, 0 Fehlalarme
-Schwelle: 0.6 | Kategorie: 8 abgefangen, 3 Fehlalarme | Aktion: 1 abgefangen, 1 Fehlalarme
-Schwelle: 0.7 | Kategorie: 8 abgefangen, 3 Fehlalarme | Aktion: 1 abgefangen, 5 Fehlalarme
-Schwelle: 0.8 | Kategorie: 8 abgefangen, 6 Fehlalarme | Aktion: 1 abgefangen, 6 Fehlalarme
-Schwelle: 0.9 | Kategorie: 8 abgefangen, 10 Fehlalarme | Aktion: 2 abgefangen, 13 Fehlalarme
-Schwelle: 0.95 | Kategorie: 9 abgefangen, 19 Fehlalarme | Aktion: 5 abgefangen, 25 Fehlalarme
-Schwelle: 0.99 | Kategorie: 10 abgefangen, 64 Fehlalarme | Aktion: 13 abgefangen, 61 Fehlalarme
+Schwelle: 0.5 | Kategorie: 2 abgefangen, 2 Fehlalarme | Aktion: 1 abgefangen, 1 Fehlalarme
+Schwelle: 0.6 | Kategorie: 5 abgefangen, 4 Fehlalarme | Aktion: 1 abgefangen, 2 Fehlalarme
+Schwelle: 0.7 | Kategorie: 6 abgefangen, 4 Fehlalarme | Aktion: 1 abgefangen, 5 Fehlalarme
+Schwelle: 0.8 | Kategorie: 6 abgefangen, 6 Fehlalarme | Aktion: 1 abgefangen, 7 Fehlalarme
+Schwelle: 0.9 | Kategorie: 7 abgefangen, 12 Fehlalarme | Aktion: 2 abgefangen, 11 Fehlalarme
+Schwelle: 0.95 | Kategorie: 8 abgefangen, 21 Fehlalarme | Aktion: 4 abgefangen, 24 Fehlalarme
+Schwelle: 0.99 | Kategorie: 8 abgefangen, 68 Fehlalarme | Aktion: 12 abgefangen, 60 Fehlalarme
 Ungültig: 0/115
