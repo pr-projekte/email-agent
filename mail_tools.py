@@ -17,7 +17,7 @@ def get_new_message_id(imap_connection, last_uid):
     for eintrag in uid_list:
         if int(eintrag) > last_uid:
             auswahl.append(eintrag)
-    return auswahl
+    return sorted(auswahl, key=int)
 
 
 def bytes_to_message(raw_bytes):
