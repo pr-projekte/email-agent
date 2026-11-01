@@ -11,13 +11,13 @@ def tabelle_anlegen():
 
     cursor.execute(
         "CREATE TABLE IF NOT EXISTS mails("
-        "uid INTEGER PRIMARY KEY,"
-        "absender TEXT,"
-        "betreff TEXT,"
-        "kategorie TEXT,"
-        "aktion TEXT,"
-        "kategorie_unsicher INTEGER,"
-        "aktion_unsicher INTEGER,"
+        "uid INTEGER PRIMARY KEY, "
+        "absender TEXT, "
+        "betreff TEXT, "
+        "kategorie TEXT, "
+        "aktion TEXT, "
+        "kategorie_unsicher INTEGER, "
+        "aktion_unsicher INTEGER, "
         "gespeichert_am TEXT)"
         )
     
