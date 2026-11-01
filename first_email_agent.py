@@ -8,6 +8,7 @@ import logging # Ermöglicht logging.
 import sys # Ermöglicht sys.exit(), um den Agenten bei einem Fehler sauber abzubrechen.
 import requests # Wird hier nur für die Fehlernamen requests.exceptions.Timeout und requests.exceptions.ConnectionError gebraucht (Ollama zu langsam oder nicht erreichbar).
 import gedaechtnis # Importiert die Funktionen aus gedaechtnis.py, um die Mails in der Datenbank zu speichern.
+import sqlite3 # Ermöglicht die Arbeit mit SQLite-Datenbanken.
 from dotenv import load_dotenv # Importiert das laden aus der .env.
 
 load_dotenv() # Läd die daten aus der .env in die Umgebungvariablen.
@@ -42,7 +43,12 @@ new_uid = mail_tools.get_new_message_id(connection, last_uid) # Besorgt die UID'
 
 logging.info(f"Neue E-Mails: {len(new_uid)}.") # Schreibt die Anzahl der neuen Mails ins Log, auch wenn es 0 sind.
 
-gedaechtnis.tabelle_anlegen() # Legt die Tabelle in der Datenbank an, falls sie noch nicht existiert.
+try:
+    gedaechtnis.tabelle_anlegen() # Legt die Tabelle in der Datenbank an, falls sie noch nicht existiert.
+except sqlite3.Error as fehler: # SQLite-Fehler (z. B. Schreibrechte, Datenbank-Datei beschädigt).
+    logging.error(f"Gedächtnis-Fehler, Lauf abgebrochen: {fehler}") # Grund ins Log.
+    print(f"Gedächtnis-Fehler, Lauf abgebrochen: {fehler}") # Derselbe Text im Terminal.
+    sys.exit(1) # Beendet den Agenten sofort. Die 1 sagt einem Scheduler, dass etwas schiefgegangen ist (0 = alles gut).
 
 for message_id in new_uid: # Für jede UID in new_uid passiert folgendes:
     raw_bytes = mail_tools.fetch_raw_bytes(connection, message_id) # Holt die rohen Bytes einer Mail.
@@ -96,8 +102,12 @@ for message_id in new_uid: # Für jede UID in new_uid passiert folgendes:
 
         logging.error(f"UID {message_id}: ungültige Modellantwort, Mail ohne Urteil weitergeleitet.") # Nur die UID, nicht die Modellantwort – die könnte Text aus der Mail enthalten.
         print(f"UID {message_id}: ungültige Modellantwort, Mail ohne Urteil weitergeleitet.") # Derselbe Text im Terminal.
-
-    gedaechtnis.mail_speichern(message_id, message['From'], message['Subject'], kategorie, aktion, kategorie_unsicher, aktion_unsicher)
+    try:
+        gedaechtnis.mail_speichern(message_id, message['From'], message['Subject'], kategorie, aktion, kategorie_unsicher, aktion_unsicher)
+    except sqlite3.Error as fehler:
+        logging.error(f"Gedächtnis-Fehler, Lauf abgebrochen bei UID {message_id}: {fehler}") # Grund und UID ins Log.
+        print(f"Gedächtnis-Fehler, Lauf abgebrochen bei UID {message_id}: {fehler}") # Derselbe Text im Terminal.
+        sys.exit(1) # Beendet den Agenten sofort. Die 1 sagt einem Scheduler, dass etwas schiefgegangen ist (0 = alles gut).
 
     # Sendet eine Nachricht mit Absender, Betreff, Inhalt und die Namen der Anhänge an Telegram. In send_error ist entweder None(wenn alles klappt) oder ein Fehlertext(bei einem Fehler).
     send_error = telegram_tools.send_telegram_message(
