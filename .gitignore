@@ -3,3 +3,4 @@ __pycache__/
 *.pyc
 letzte_uid.txt
 agent_log.txt
+gedaechtnis.db

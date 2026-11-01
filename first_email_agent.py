@@ -7,6 +7,8 @@ import urteil # urteil.py gibt ein Dict mit der aufgeräumten Antwort, dem Urtei
 import logging # Ermöglicht logging.
 import sys # Ermöglicht sys.exit(), um den Agenten bei einem Fehler sauber abzubrechen.
 import requests # Wird hier nur für die Fehlernamen requests.exceptions.Timeout und requests.exceptions.ConnectionError gebraucht (Ollama zu langsam oder nicht erreichbar).
+import gedaechtnis # Importiert die Funktionen aus gedaechtnis.py, um die Mails in der Datenbank zu speichern.
+import sqlite3 # Ermöglicht die Arbeit mit SQLite-Datenbanken.
 from dotenv import load_dotenv # Importiert das laden aus der .env.
 
 load_dotenv() # Läd die daten aus der .env in die Umgebungvariablen.
@@ -41,6 +43,13 @@ new_uid = mail_tools.get_new_message_id(connection, last_uid) # Besorgt die UID'
 
 logging.info(f"Neue E-Mails: {len(new_uid)}.") # Schreibt die Anzahl der neuen Mails ins Log, auch wenn es 0 sind.
 
+try:
+    gedaechtnis.tabelle_anlegen() # Legt die Tabelle in der Datenbank an, falls sie noch nicht existiert.
+except sqlite3.Error as fehler: # SQLite-Fehler (z. B. Schreibrechte, Datenbank-Datei beschädigt).
+    logging.error(f"Gedächtnis-Fehler, Lauf abgebrochen: {fehler}") # Grund ins Log.
+    print(f"Gedächtnis-Fehler, Lauf abgebrochen: {fehler}") # Derselbe Text im Terminal.
+    sys.exit(1) # Beendet den Agenten sofort. Die 1 sagt einem Scheduler, dass etwas schiefgegangen ist (0 = alles gut).
+
 for message_id in new_uid: # Für jede UID in new_uid passiert folgendes:
     raw_bytes = mail_tools.fetch_raw_bytes(connection, message_id) # Holt die rohen Bytes einer Mail.
     message = mail_tools.bytes_to_message(raw_bytes) # Macht aus den rohen Bytes ein Mail-Objekt.
@@ -52,7 +61,7 @@ for message_id in new_uid: # Für jede UID in new_uid passiert folgendes:
     try:
         bewertung = urteil.urteilen(mail_text) # Benutzt die Funktionen aus urteil.py und speichert das Ergebnis in "bewertung".
 
-    except requests.exceptions.Timeout as fehler: # Ollama antwortet nicht innerhalb des timeout aus urteil.py (120 Sekunden). Steht über ConnectionError, weil ConnectTimeout zu beiden Familien gehört – sonst käme er als "nicht erreichbar" ins Log.
+    except requests.exceptions.Timeout as fehler: # Ollama antwortet nicht innerhalb des timeouts aus urteil.py (120 Sekunden). Steht über ConnectionError, weil ConnectTimeout zu beiden Familien gehört – sonst käme er als "nicht erreichbar" ins Log.
         logging.error(f"Ollama antwortet nicht (Zeitüberschreitung), Lauf abgebrochen bei UID {message_id}: {fehler}") # Grund und UID ins Log.
         print(f"Ollama antwortet nicht (Zeitüberschreitung), Lauf abgebrochen bei UID {message_id}: {fehler}") # Derselbe Text im Terminal.
         sys.exit(1) # Abbruch mit Exit-Code 1, wie bei "Ollama nicht erreichbar". Der nächste Lauf versucht es mit derselben Mail noch einmal.
@@ -63,6 +72,12 @@ for message_id in new_uid: # Für jede UID in new_uid passiert folgendes:
         sys.exit(1) # Abbruch mit Exit-Code 1, wie bei Verbindung und Login.
 
     if bewertung["gueltig"]: # Nur eine gültige Modellantwort hat ein Urteil: Log-Zeile, Warnungen und Ausgabe im Terminal gibt es nur dann.
+
+        kategorie = bewertung["result"]["kategorie"] # Holt die Kategorie aus der Modellantwort.
+        aktion = bewertung["result"]["aktion"] # Holt die Aktion aus der Modellantwort.
+        kategorie_unsicher = bewertung["kategorie_unsicher"]
+        aktion_unsicher = bewertung["aktion_unsicher"]
+
         logging.info(f"UID {message_id}: {bewertung["result"]["kategorie"]} / {bewertung["result"]["aktion"]} ({round(bewertung["kategorie_sicherheit"] * 100, 1)}% / {round(bewertung["aktion_sicherheit"] * 100, 1)}%).") # Schreibt UID, Kategorie, Aktion und beide Sicherheiten ins Log. Absender und Betreff bewusst nicht (Datenschutz).
 
         if bewertung["kategorie_unsicher"]: # Liegt die Kategorie unter der Schwelle (80 %), kommt eine Warnung ins Log.
@@ -79,8 +94,20 @@ for message_id in new_uid: # Für jede UID in new_uid passiert folgendes:
             f"Sicherheiten: {round(bewertung["kategorie_sicherheit"] * 100, 1)} und {round(bewertung["aktion_sicherheit"] * 100, 1)}"
             )
     else: # Ungültige Antwort: Mail überspringen, aber melden. Telegram und das Speichern der UID darunter laufen trotzdem.
+
+        kategorie = None
+        aktion = None
+        kategorie_unsicher = None
+        aktion_unsicher = None
+
         logging.error(f"UID {message_id}: ungültige Modellantwort, Mail ohne Urteil weitergeleitet.") # Nur die UID, nicht die Modellantwort – die könnte Text aus der Mail enthalten.
         print(f"UID {message_id}: ungültige Modellantwort, Mail ohne Urteil weitergeleitet.") # Derselbe Text im Terminal.
+    try:
+        gedaechtnis.mail_speichern(message_id, message['From'], message['Subject'], kategorie, aktion, kategorie_unsicher, aktion_unsicher)
+    except sqlite3.Error as fehler:
+        logging.error(f"Gedächtnis-Fehler, Lauf abgebrochen bei UID {message_id}: {fehler}") # Grund und UID ins Log.
+        print(f"Gedächtnis-Fehler, Lauf abgebrochen bei UID {message_id}: {fehler}") # Derselbe Text im Terminal.
+        sys.exit(1) # Beendet den Agenten sofort. Die 1 sagt einem Scheduler, dass etwas schiefgegangen ist (0 = alles gut).
 
     # Sendet eine Nachricht mit Absender, Betreff, Inhalt und die Namen der Anhänge an Telegram. In send_error ist entweder None(wenn alles klappt) oder ein Fehlertext(bei einem Fehler).
     send_error = telegram_tools.send_telegram_message(
